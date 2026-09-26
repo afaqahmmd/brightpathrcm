@@ -190,14 +190,6 @@
   }
 }
 
-:root[data-theme="dark"] .btn--navy {
-  --btn-bg: var(--on-navy);
-  --btn-fg: var(--navy-950);
-  &:hover {
-    --btn-bg: #fff;
-  }
-}
-
 .btn--outline {
   --btn-bg: transparent;
   --btn-fg: var(--heading);

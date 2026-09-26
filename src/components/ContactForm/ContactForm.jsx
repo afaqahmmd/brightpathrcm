@@ -1,9 +1,8 @@
 "use client";
 import { useState } from "react";
-import emailjs from "@emailjs/browser";
 import { PiArrowRight, PiCheckCircle, PiWarningCircle } from "react-icons/pi";
 
-// Field names must match the EmailJS template variables.
+// Field names must match what /api/contact validates.
 const initialForm = {
   firstName: "",
   lastName: "",
@@ -12,6 +11,7 @@ const initialForm = {
   date: "",
   time: "",
   message: "",
+  bp_hp: "", // honeypot, hidden from real users; name chosen so autofill ignores it
 };
 
 const Field = ({ label, name, optional, children }) => (
@@ -45,19 +45,24 @@ const ContactForm = () => {
     setSuccess(null);
 
     try {
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
-        formData,
-        {
-          publicKey: process.env.NEXT_PUBLIC_EMAIL_KEY,
-        }
-      );
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok) {
+        throw new Error(result.error || "We couldn't send your request. Please try again, or contact us by phone or email.");
+      }
 
       setSuccess("Thank you. Your request has been sent and our team will be in touch.");
       setFormData(initialForm);
-    } catch (error) {
-      setError("We couldn't send your request. Please try again, or contact us by phone or email.");
+    } catch (err) {
+      setError(
+        err instanceof TypeError
+          ? "We couldn't reach the server. Check your connection and try again."
+          : err.message
+      );
     } finally {
       setSending(false);
     }
@@ -65,6 +70,11 @@ const ContactForm = () => {
 
   return (
     <form className="contact-form" onSubmit={handleSubmit}>
+      <div className="contact-form__trap" aria-hidden="true">
+        <label htmlFor="bp_hp">Do not fill in</label>
+        <input id="bp_hp" type="text" name="bp_hp" tabIndex={-1} autoComplete="off"
+          data-lpignore="true" data-1p-ignore value={formData.bp_hp} onChange={handleChange} />
+      </div>
       <fieldset className="contact-form__group">
         <legend className="contact-form__legend">
           <span className="mono">01</span> About you

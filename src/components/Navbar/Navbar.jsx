@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import { PiArrowRight, PiList, PiX } from "react-icons/pi";
 import NavLink from "./Links/NavLink/NavLink";
 import Logo from "@/components/Logo/Logo";
-import ThemeToggleButton from "@/components/ThemeToggleButton/ThemeToggleButton";
 import { navLinks, siteConfig } from "@/lib/siteConfig";
 
 const Navbar = () => {
@@ -50,7 +49,6 @@ const Navbar = () => {
         </nav>
 
         <div className="site-header__actions">
-          <ThemeToggleButton />
           <Link href="/contact" className="btn site-header__cta">
             Book a revenue review
           </Link>

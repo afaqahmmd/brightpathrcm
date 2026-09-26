@@ -19,7 +19,7 @@ There is no test suite.
 
 ## Content and configuration
 
-- `src/lib/siteConfig.js`: brand name, domain, contact details, socials, map embed URL, nav links. Many values are **placeholders** marked `TODO(client)`. Empty strings hide the related UI (e.g. empty `mapEmbedUrl` hides the About page map).
+- `src/lib/siteConfig.js`: brand name, domain, contact details (Denver office address and phone are real; email and domain are still placeholders), socials, map embed URL, nav links. Empty strings hide the related UI (e.g. empty `mapEmbedUrl` hides the About page map).
 - `src/lib/DataStore.js`: all site copy as exported arrays (`whyChooseUs`, `revenueLeaks`, `processSteps`, `qaArray`, `testimonials`, `values`, `blogs`, `services`, `specialityCategories`, `specialities`). `services[].icon` holds React elements, so the file contains JSX.
   - `revenueLeaks[].serviceId` links each problem to a service; the home page `ServiceSection` features the service with id 6 (`FEATURED_ID`).
   - `testimonials` are placeholders (`placeholder: true` renders a "Sample" badge). Replace with real, approved quotes.
@@ -32,7 +32,7 @@ There is no test suite.
 
 `src/app/layout.js` imports `./styles.scss` directly (Next compiles it; there is no precompiled CSS). `styles.scss` imports `src/styles/_imports.scss`, which imports foundation partials then every component/page partial **by explicit path**. A new `.scss` partial must be added to `_imports.scss`; components never import their own styles.
 
-- `_tokens.scss`: CSS custom properties. Brand colours (`--navy-*`, `--orange-*`) are constant; surface/text tokens (`--bg`, `--surface`, `--heading`, `--text`, `--muted`, `--line`, `--accent-text`) switch under `:root[data-theme="dark"]`. Always use tokens rather than raw colours so dark mode works.
+- `_tokens.scss`: CSS custom properties. Brand colours (`--navy-*`, `--orange-*`) are constant; surface/text tokens (`--bg`, `--surface`, `--heading`, `--text`, `--muted`, `--line`, `--accent-text`) are light-only (there is no dark mode). Use tokens rather than raw colours.
 - `_mixins.scss`: `up($bp)` / `down($bp)` breakpoints (`$bp-sm` 640, `$bp-md` 900, `$bp-lg` 1120), `on-navy` (re-points tokens for navy sections), `focus-ring`.
 - `_ui.scss`: shared primitives (`.container`, `.section`, `.section--surface|--tint` (light), `.section--navy|--deep`, `.eyebrow`, `.display`/`.h2`/`.h3`, `.accent`, `.lede`, `.btn` + modifiers, `.link-arrow`, `.tag`, `.duotone` image treatment, `.prose` for HTML bodies, `.reveal`).
 - Orange text on light surfaces must use `var(--accent-text)` (AA-safe `--orange-600`); `--orange-500` is for fills and CTA buttons, which use navy text.
@@ -40,18 +40,18 @@ There is no test suite.
 - Class naming is BEM-ish (`.block__element--modifier`), global, no CSS modules.
 - Don't put `overflow: hidden` on an ancestor of a `position: sticky` element (it becomes the sticky container); use `overflow: clip`.
 
-## Theming
+## Reveal animations
 
-An inline script in `layout.js` runs before paint: it adds the `js` class to `<html>` (so `.reveal` only hides content when JS runs) and applies the saved theme from `localStorage["bp-theme"]` to `html[data-theme]`. The default is light. `ThemeToggleButton` flips the attribute and persists it.
+An inline script in `layout.js` adds the `js` class to `<html>` before paint, so `.reveal` only hides content when JS runs. The site is light-only; the old theme toggle was removed.
 
 ## Components and rendering
 
-- Pages are server components exporting `metadata` (title template `%s | BrightPathRCM` is set in the layout). Client components are limited to interactive pieces: `Navbar` (sticky header, full-screen mobile menu), `ThemeToggleButton`, `Reveal` (IntersectionObserver fade-in), `QACard` (accessible accordion), `TestimonialSection`, `SpecialityDirectory` (search + category filter), `ContactForm`.
+- Pages are server components exporting `metadata` (title template `%s | BrightPathRCM` is set in the layout). Client components are limited to interactive pieces: `Navbar` (sticky header, full-screen mobile menu), `Reveal` (IntersectionObserver fade-in), `QACard` (accessible accordion), `TestimonialSection`, `SpecialityDirectory` (search + category filter), `ContactForm`.
 - `PageHeader` is the shared light header for inner pages (breadcrumbs, eyebrow, title, intro, optional `aside`). `CTASection` is the closing conversion band; pass `title`/`text` to vary it.
 
 ## External services / env vars
 
 Configured via `NEXT_PUBLIC_*` env vars (no `.env` is committed):
-- `ContactForm` sends through EmailJS: `NEXT_PUBLIC_EMAIL_SERVICE_ID`, `NEXT_PUBLIC_EMAIL_TEMPLATE_ID`, `NEXT_PUBLIC_EMAIL_KEY`. The form field names (`firstName`, `lastName`, `email`, `phone`, `date`, `time`, `message`) must match the EmailJS template variables.
+- `ContactForm` POSTs JSON to `src/app/api/contact/route.js`, which validates input (required fields, length limits, email format, a hidden `bp_hp` honeypot (meaningless name so autofill never fills it; hits are logged)) and sends via Nodemailer over SMTP. Server-only env vars: `SMTP_HOST`, `SMTP_PORT` (465 = implicit TLS), `SMTP_USER`, `SMTP_PASSWORD`, optional `CONTACT_TO` (defaults to `SMTP_USER`). Submissions arrive with `Reply-To` set to the visitor. Never prefix these with `NEXT_PUBLIC_`. See `.env.example`. Many home/office networks block outbound SMTP, so the send may only work once deployed.
 - Tawk.to chat in `layout.js`: `NEXT_PUBLIC_TWAKTO_PROPERTY_ID`, `NEXT_PUBLIC_TWAKTO_WIDGET_ID` (note the "TWAKTO" spelling). The script is only rendered when both are set.
 - Vercel Analytics and Speed Insights are mounted in the layout; their scripts 404 locally, which is expected.

@@ -70,7 +70,13 @@ const Contact = () => {
             {contact.address && (
               <li>
                 <PiMapPin aria-hidden="true" />
-                <span>{contact.address}</span>
+                {contact.addressHref ? (
+                  <a href={contact.addressHref} target="_blank" rel="noopener noreferrer">
+                    {contact.address}
+                  </a>
+                ) : (
+                  <span>{contact.address}</span>
+                )}
               </li>
             )}
             {contact.hours && (

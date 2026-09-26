@@ -1,5 +1,4 @@
 // BrightPathRCM design tokens.
-// Brand colours are fixed; surface/text tokens switch with [data-theme].
 
 :root {
   // Brand
@@ -49,25 +48,4 @@
   --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
 
   color-scheme: light;
-}
-
-@mixin dark-tokens {
-  --bg: #06101f;
-  --surface: #0b1a31;
-  --surface-2: #10223f;
-  --tint: #0d1d38;
-  --grid-line: rgba(255, 255, 255, 0.045);
-  --heading: #f4f1ea;
-  --text: #c2cbd9;
-  --muted: #8d99ae;
-  --line: rgba(255, 255, 255, 0.1);
-  --line-strong: rgba(255, 255, 255, 0.22);
-  --accent-text: var(--orange-400);
-  --shadow-sm: none;
-  --shadow-md: 0 18px 40px -24px rgba(0, 0, 0, 0.8);
-  color-scheme: dark;
-}
-
-:root[data-theme="dark"] {
-  @include dark-tokens;
 }

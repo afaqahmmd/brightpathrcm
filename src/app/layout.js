@@ -45,19 +45,18 @@ export const viewport = {
 const tawkConfigured =
   process.env.NEXT_PUBLIC_TWAKTO_PROPERTY_ID && process.env.NEXT_PUBLIC_TWAKTO_WIDGET_ID;
 
-// Runs before paint: marks JS as available (for reveal animations) and applies the saved theme.
-const themeInit = `(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('bp-theme');if(t==='dark'||t==='light')d.setAttribute('data-theme',t);}catch(e){}})();`;
+// Runs before paint: marks JS as available so .reveal animations only hide content when they can run.
+const jsInit = `document.documentElement.classList.add('js');`;
 
 export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      data-theme="light"
       className={`${jakarta.variable} ${manrope.variable} ${plexMono.variable}`}
       suppressHydrationWarning
     >
       <head>
-        <script dangerouslySetInnerHTML={{ __html: themeInit }} />
+        <script dangerouslySetInnerHTML={{ __html: jsInit }} />
       </head>
       <body>
         <a href="#main" className="skip-link">

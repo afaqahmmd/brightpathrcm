@@ -124,23 +124,6 @@
   }
 }
 
-.theme-toggle {
-  width: 42px;
-  height: 42px;
-  display: inline-grid;
-  place-items: center;
-  border-radius: var(--radius);
-  color: var(--muted);
-  font-size: 1.25rem;
-  border: 1px solid var(--line-strong);
-  transition: color 0.2s, border-color 0.2s;
-
-  &:hover {
-    color: var(--heading);
-    border-color: var(--heading);
-  }
-}
-
 .menu-button {
   width: 44px;
   height: 44px;

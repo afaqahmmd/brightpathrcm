@@ -11,16 +11,17 @@ export const siteConfig = {
   url: "https://www.brightpathrcm.com",
 
   contact: {
-    email: "hello@brightpathrcm.com",
-    phone: "+1 (000) 000-0000",
-    phoneHref: "tel:+10000000000",
-    address: "Office address, City, State ZIP",
-    addressHref: "",
+    email: "info@brightpathrcm.com",
+    phone: "720-803-0400",
+    phoneHref: "tel:+17208030400",
+    address: "1500 N Grant St, Ste R, Denver, CO 80203",
+    addressHref:
+      "https://www.google.com/maps/search/?api=1&query=1500+N+Grant+St+Ste+R+Denver+CO+80203",
     hours: "Monday–Friday, business hours",
   },
 
   // Google Maps embed URL for the About page. Leave empty to hide the map.
-  mapEmbedUrl: "",
+  mapEmbedUrl: "https://www.google.com/maps?q=1500+N+Grant+St+Ste+R,+Denver,+CO+80203&output=embed",
 
   socials: [
     // { label: "LinkedIn", href: "https://www.linkedin.com/company/..." },

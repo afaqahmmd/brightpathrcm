@@ -256,12 +256,11 @@
   }
 }
 
-:root[data-theme="dark"] {
-  .form-message--success {
-    color: #6fd3a8;
-  }
-
-  .form-message--error {
-    color: #ff8f86;
-  }
+// Honeypot field: off-screen for people, still visible to naive bots
+.contact-form__trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }

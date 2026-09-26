@@ -145,12 +145,6 @@
   }
 }
 
-:root[data-theme="dark"] .chip.is-active {
-  background: var(--on-navy);
-  border-color: var(--on-navy);
-  color: var(--navy-950);
-}
-
 .speciality-card {
   position: relative;
   margin: -1px 0 0 -1px;

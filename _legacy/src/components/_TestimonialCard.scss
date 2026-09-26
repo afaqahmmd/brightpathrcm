@@ -1,0 +1,48 @@
+.testimonial-card {
+  background-color: transparentize($color: $secondary, $amount: 0.9);
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 300px;
+  min-width: 250px;
+  box-shadow: $boxShadow;
+  transition: box-shadow 0.3s ease-in-out;
+  &:hover {
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: $boxShadowHover;
+  }
+}
+
+.testimonial-card {
+  .header {
+    @include flex-layout(row, flex-start, center);
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    .user-image {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid $secondary;
+      .user-img {
+        object-fit: cover;
+      }
+    }
+    .user-test {
+      .user-name {
+        font-weight: 500;
+      }
+
+      .user-star {
+        color: $secondary;
+      }
+    }
+  }
+  .body {
+    p {
+      color: $textFused;
+    }
+  }
+  margin: auto;
+}
+

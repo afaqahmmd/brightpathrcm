@@ -1,0 +1,79 @@
+.sub-hero-container {
+  margin-top: 2rem;
+  border-radius: 20px;
+  h1 {
+    text-align: center;
+    margin-top: 5rem;
+  }
+  p {
+    // text-align: center;
+    color: $textFused;
+    line-height: 1.6;
+  }
+
+  .vmc-container {
+    @include flex-layout(row, space-between, stretch);
+    flex-wrap: wrap;
+    gap: 1rem;
+    .vmc {
+      border: 2px solid transparentize($color: $primary, $amount: 0.9);
+      padding: 1rem;
+      max-width: 350px;
+      border-radius: 20px;
+      box-shadow: $boxShadow;
+      .title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-align: center;
+      }
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        border: 2px solid transparentize($color: $primary, $amount: 0);
+        transition: all 0.3s ease-in-out;
+        box-shadow: $boxShadowHover;
+      }
+    }
+    @include device("mobile") {
+      @include flex-layout(column, center, center);
+      .vmc {
+        max-width: none;
+      }
+    }
+  }
+}
+
+.sub-hero-container {
+  .billing-section {
+    margin-top: 5rem;
+    @include flex-layout(row, space-between, stretch);
+    gap: 1rem;
+    .image-container {
+      position: relative;
+      flex-basis: 50%;
+      .bill-img {
+        border-radius: 20px;
+        object-fit: cover;
+        box-shadow: $boxShadow;
+      }
+    }
+    .text-container {
+      align-self: flex-start;
+      flex-basis: 50%;
+      .heading {
+        font-size: 2rem;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@include device("mobile") {
+  .sub-hero-container {
+    .billing-section {
+      @include flex-layout(column, space-between, stretch);
+      .image-container {
+        min-height: 300px;
+      }
+    }
+  }
+}

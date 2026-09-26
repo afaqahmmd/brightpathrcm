@@ -1,0 +1,29 @@
+.article {
+  &__inner {
+    display: grid;
+    gap: 64px;
+
+    @include up($bp-lg) {
+      grid-template-columns: minmax(0, 1fr) 300px;
+      gap: 96px;
+      align-items: start;
+    }
+  }
+
+  &__main {
+    min-width: 0;
+  }
+
+  &__media {
+    aspect-ratio: 16 / 8;
+    border-radius: var(--radius);
+    margin-bottom: 48px;
+  }
+
+  &__side {
+    @include up($bp-lg) {
+      position: sticky;
+      top: calc(var(--header-h) + 32px);
+    }
+  }
+}

@@ -1,0 +1,119 @@
+.leaks {
+  &__inner {
+    display: grid;
+    gap: 48px;
+
+    @include up($bp-lg) {
+      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+      gap: 96px;
+      align-items: start;
+    }
+  }
+
+  &__intro {
+    display: grid;
+    gap: 22px;
+
+    @include up($bp-lg) {
+      position: sticky;
+      top: calc(var(--header-h) + 40px);
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--line-strong);
+  }
+
+  &__item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 8px 16px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--line);
+
+    @include up($bp-md) {
+      grid-template-columns: 56px 1fr 200px;
+      gap: 24px;
+      padding: 32px 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -1px;
+      height: 2px;
+      width: 0;
+      background: var(--orange-500);
+      transition: width 0.5s var(--ease);
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+  }
+
+  &__index {
+    font-size: 0.8rem;
+    color: var(--accent-text);
+    padding-top: 5px;
+  }
+
+  &__problem {
+    font-family: var(--font-display);
+    font-size: clamp(1.1rem, 0.6vw + 0.95rem, 1.35rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+  }
+
+  &__detail {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 0.97rem;
+  }
+
+  &__fix {
+    grid-column: 2;
+    display: grid;
+    gap: 4px;
+    align-self: start;
+    padding-top: 4px;
+
+    @include up($bp-md) {
+      grid-column: 3;
+      justify-items: end;
+      text-align: right;
+    }
+
+    .mono {
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+  }
+
+  &__fix-name {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 700;
+    font-size: 0.92rem;
+    color: var(--heading);
+
+    svg {
+      color: var(--accent-text);
+      flex: none;
+      transition: transform 0.25s var(--ease);
+    }
+  }
+
+  &__fix:hover &__fix-name svg {
+    transform: translate(2px, -2px);
+  }
+}

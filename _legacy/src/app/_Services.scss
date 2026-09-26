@@ -1,0 +1,36 @@
+.services-wrapper {
+  .header {
+    margin-top: 1rem;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    img {
+      object-fit: cover;
+      border-radius: 20px;
+      object-position: 0 70%;
+    }
+  }
+  h1 {
+    text-align: center;
+  }
+}
+
+.services-wrapper {
+  .service-card-container {
+    @include flex-layout(row, center, center);
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .typewriter {
+    margin: auto;
+    max-width: max-content;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    span {
+      margin: auto;
+      text-align: center;
+      color: $primary !important;
+    }
+  }
+}

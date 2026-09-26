@@ -1,0 +1,23 @@
+.pre-navbar-wrapper {
+  width: 100%;
+  background-color: $primary;
+  .pre-navbar-container {
+    padding: 0 0.5rem;
+    margin: auto;
+    @include flex-layout(row, space-between, center);
+    max-width: 1200px;
+    p {
+      @include flex-layout(row, center, center);
+      gap: 0.5rem;
+      color: $pure;
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  @include device("mobile") {
+    display: none;
+  }
+}

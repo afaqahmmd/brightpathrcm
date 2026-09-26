@@ -1,0 +1,40 @@
+//Buttons
+
+.btn {
+  border-radius: 25px;
+  padding: 0.7rem 1.3rem;
+  color: white;
+  @include flex-layout(row, center, center);
+  gap: 0.4rem;
+  box-shadow: $boxShadow;
+  text-wrap: nowrap;
+}
+.btn-s {
+  border-radius: 10px;
+  padding: 0.7rem 1.3rem;
+  color: white;
+  @include flex-layout(row, center, center);
+  gap: 0.4rem;
+  box-shadow: $boxShadow;
+  text-wrap: nowrap;
+}
+
+.btn-primary {
+  background-color: $primary;
+  border: 2px solid transparent;
+  transition: color 0.3s ease-in-out;
+  &:hover {
+    transition: color 0.3s ease-in-out;
+    border: 2px solid $primary;
+    background-color: transparentize($color: $primary, $amount: 0.9);
+    color: $primary;
+    box-shadow: $boxShadowHover;
+  }
+}
+.section-header {
+  color: $primary;
+}
+
+.c-primary {
+  color: $primary;
+}

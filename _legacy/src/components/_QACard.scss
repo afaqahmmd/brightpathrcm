@@ -1,0 +1,69 @@
+.qa-card {
+  width: 45%;
+  width: 100%;
+  border: 2px solid transparentize($color: $primary, $amount: 0.8);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: $boxShadow;
+  transition: box-shadow 0.3s ease-in-out;
+  &:hover {
+    border: 2px solid $primary;
+    box-shadow: $boxShadowHover;
+    transition: box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+    .plus-icon {
+      transition: color 0.3s ease-in-out;
+      color: $primary !important;
+    }
+  }
+}
+
+.qa-card {
+  .header {
+    @include flex-layout(row, space-between, center);
+    .question {
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+    .plus-icon {
+      align-self: baseline;
+      color: transparentize($color: $primary, $amount: 1);
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    .minus-icon {
+      align-self: baseline;
+      color: $primary;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .answer {
+    p {
+      display: none;
+      height: 0px;
+      color: $textFused;
+    }
+  }
+  &.open {
+    width: 100%;
+    grid-column: span 2;
+    border: 2px solid $primary;
+    .answer {
+      p {
+        display: block;
+        height: max-content;
+      }
+    }
+  }
+}
+
+@include device("mobile") {
+  .qa-card {
+    width: 100%;
+    &.open {
+      grid-column: span 1;
+    }
+  }
+}

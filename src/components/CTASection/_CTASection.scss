@@ -1,0 +1,76 @@
+.cta-band {
+  background: var(--tint);
+  border-top: 1px solid var(--line);
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(72px, 9vw, 120px);
+
+  // Orange path arc
+  &::before {
+    content: "";
+    position: absolute;
+    left: -8%;
+    bottom: -140%;
+    width: 70%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 1px solid rgba(242, 107, 29, 0.35);
+    pointer-events: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: -8%;
+    bottom: -150%;
+    width: 80%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    pointer-events: none;
+  }
+
+  &__inner {
+    position: relative;
+    display: grid;
+    gap: 40px;
+
+    @include up($bp-lg) {
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.6fr);
+      align-items: end;
+      gap: 80px;
+    }
+  }
+
+  &__copy {
+    display: grid;
+    gap: 22px;
+
+    .h2 {
+      max-width: 18ch;
+    }
+  }
+
+  &__actions {
+    display: grid;
+    gap: 18px;
+    justify-items: start;
+
+    @include down($bp-sm) {
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+
+  &__contact {
+    display: grid;
+    gap: 4px;
+    font-size: 0.85rem;
+    color: var(--muted);
+
+    a:hover {
+      color: var(--accent-text);
+    }
+  }
+}

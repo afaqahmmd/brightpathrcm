@@ -1,0 +1,45 @@
+.value-card {
+  border-radius: 10px;
+  border: 2px solid transparentize($color: $primary, $amount: 0.9);
+  padding: 1rem;
+  @include flex-layout(column, center, center);
+}
+
+.value-card {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  .icon-holder {
+    transition: inherit;
+    position: absolute;
+    top: -30px;
+    backdrop-filter: blur(100px);
+    background-color: transparentize($color: $primary, $amount: 0.9);
+    @include flex-layout(row, center, center);
+    padding: 1rem;
+    border-radius: 50%;
+    border: 2px solid transparentize($color: $primary, $amount: 0.9);
+    svg {
+      color: $primary;
+      width: 30px;
+      height: 30px;
+    }
+    box-shadow: 2px 2px 30px -15px rgba(36, 190, 224, 0.2);
+  }
+  box-shadow: 2px 2px 30px -15px rgba(36, 190, 224, 0.2);
+  &:hover {
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 2px 50px -15px rgba(36, 190, 224, 0.3);
+    border: 2px solid $primary;
+    .icon-holder {
+      transition: inherit;
+      box-shadow: 2px 2px 50px -15px rgba(36, 190, 224, 0.3);
+      border: 2px solid $primary;
+    }
+  }
+  .card-body {
+    align-self: flex-start;
+    h4 {
+      color: $primary;
+    }
+  }
+}

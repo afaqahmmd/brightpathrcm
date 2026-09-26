@@ -1,0 +1,33 @@
+$bp-sm: 640px;
+$bp-md: 900px;
+$bp-lg: 1120px;
+
+@mixin up($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
+
+@mixin down($bp) {
+  @media (max-width: ($bp - 1)) {
+    @content;
+  }
+}
+
+@mixin on-navy {
+  background: var(--navy-900);
+  color: var(--on-navy-muted);
+  --heading: var(--on-navy);
+  --text: var(--on-navy-muted);
+  --muted: var(--on-navy-muted);
+  --line: var(--on-navy-line);
+  --line-strong: rgba(255, 255, 255, 0.24);
+  --accent-text: var(--orange-400);
+  --surface: var(--navy-800);
+  --grid-line: rgba(255, 255, 255, 0.045);
+}
+
+@mixin focus-ring {
+  outline: 2px solid var(--orange-500);
+  outline-offset: 3px;
+}

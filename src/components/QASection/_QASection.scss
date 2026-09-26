@@ -1,0 +1,113 @@
+.faq {
+  &__inner {
+    display: grid;
+    gap: 48px;
+
+    @include up($bp-lg) {
+      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+      gap: 96px;
+      align-items: start;
+    }
+  }
+
+  &__intro {
+    display: grid;
+    gap: 22px;
+
+    @include up($bp-lg) {
+      position: sticky;
+      top: calc(var(--header-h) + 40px);
+    }
+  }
+
+  &__ask {
+    margin-top: 12px;
+    display: grid;
+    gap: 8px;
+    justify-items: start;
+    color: var(--muted);
+  }
+
+  &__phone {
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+
+  &__list {
+    border-top: 1px solid var(--line-strong);
+  }
+}
+
+.qa-card {
+  border-bottom: 1px solid var(--line);
+
+  &__heading {
+    margin: 0;
+    font: inherit;
+  }
+
+  &__toggle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 26px 0;
+    text-align: left;
+    font-family: var(--font-body);
+    font-size: clamp(1.02rem, 0.4vw + 0.95rem, 1.18rem);
+    font-weight: 600;
+    color: var(--heading);
+    line-height: 1.4;
+
+    &:hover {
+      color: var(--accent-text);
+    }
+  }
+
+  &__icon {
+    flex: none;
+    width: 36px;
+    height: 36px;
+    padding: 9px;
+    border: 1px solid var(--line-strong);
+    border-radius: 50%;
+    color: var(--heading);
+    transition: transform 0.35s var(--ease), background-color 0.2s, color 0.2s, border-color 0.2s;
+  }
+
+  &__answer {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.35s var(--ease);
+
+    > div {
+      overflow: hidden;
+    }
+
+    p {
+      padding: 0 56px 28px 0;
+      color: var(--text);
+      max-width: 62ch;
+    }
+  }
+
+  &.open {
+    .qa-card__answer {
+      grid-template-rows: 1fr;
+    }
+
+    .qa-card__icon {
+      transform: rotate(45deg);
+      background: var(--orange-500);
+      border-color: var(--orange-500);
+      color: var(--navy-950);
+    }
+  }
+}
+
+// Collapsed answers stay out of the tab order / accessibility tree
+.qa-card:not(.open) .qa-card__answer > div {
+  visibility: hidden;
+  transition: visibility 0s 0.35s;
+}

@@ -1,0 +1,50 @@
+.service-card {
+  position: relative;
+  //   max-width: 300px;
+  border-radius: 20px;
+  //   box-shadow: $boxShadow;
+
+  background-color: transparent;
+  padding: 1rem;
+  //   background-color: transparentize($color: $primary, $amount: 0.9);
+  //   overflow: hidden;
+  //   border: 2px solid $primary;
+  border: 2px solid transparentize($color: $primary, $amount: 0.9);
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    border: 2px solid transparentize($color: $primary, $amount: 0);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 2px 50px -15px rgba(36, 190, 224, 0.3);
+    // background-color: transparentize($color: $primary, $amount: 0.9);
+  }
+  .header {
+    border-radius: 19px;
+    color: $primary;
+    font-weight: 600;
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 1.2rem;
+    // color: $pure;
+    // position: absolute;
+    // background-color: $primary;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    // padding: 1rem;
+  }
+  .body {
+    color: $textFused;
+    line-height: 1.6;
+  }
+  &:before {
+    border-radius: 20px;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    box-shadow: 2px 2px 30px -15px rgba(36, 190, 224, 0.2);
+  }
+}

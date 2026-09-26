@@ -1,0 +1,27 @@
+.info-card {
+  @include flex-layout(row, flex-start, center);
+  gap: 0.5rem;
+  .icon {
+    align-self: flex-start;
+    @include flex-layout(row, center, center);
+
+    color: $secondary;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .text {
+    @include flex-layout(column, center, flex-start);
+    color: $textFused;
+    .title {
+      font-weight: 600;
+      text-wrap: nowrap;
+    }
+    .desc {
+      font-size: 0.9rem;
+      text-wrap: nowrap;
+    }
+  }
+}
+

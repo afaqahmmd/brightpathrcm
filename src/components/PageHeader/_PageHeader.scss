@@ -1,0 +1,115 @@
+.page-header {
+  position: relative;
+  overflow: hidden;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+  padding-block: clamp(48px, 7vw, 96px) clamp(56px, 8vw, 112px);
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: min(240px, 30%);
+    height: 3px;
+    background: var(--orange-500);
+  }
+
+  &__inner {
+    position: relative;
+    display: grid;
+    gap: 40px;
+
+    @include up($bp-lg) {
+      grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr);
+      align-items: end;
+      gap: 80px;
+    }
+  }
+
+  &__main {
+    display: grid;
+    gap: 22px;
+  }
+
+  &__crumbs {
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+
+    ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    li:not(:last-child)::after {
+      content: "/";
+      margin-left: 6px;
+      color: var(--line-strong);
+    }
+
+    a:hover {
+      color: var(--accent-text);
+    }
+
+    [aria-current] {
+      color: var(--heading);
+    }
+  }
+
+  &__title {
+    font-size: clamp(2.2rem, 3.6vw + 0.8rem, 4.1rem);
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+    font-weight: 700;
+    max-width: 18ch;
+  }
+
+  &--compact &__title {
+    font-size: clamp(1.9rem, 2.6vw + 0.8rem, 3.2rem);
+    max-width: 22ch;
+  }
+
+  &__aside {
+    border-left: 1px solid var(--line);
+    padding-left: 28px;
+
+    @include down($bp-lg) {
+      border-left: 0;
+      padding-left: 0;
+      border-top: 1px solid var(--line);
+      padding-top: 28px;
+    }
+  }
+}
+
+// Reusable "key facts" list for page header asides
+.fact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 18px;
+
+  li {
+    display: grid;
+    gap: 2px;
+  }
+
+  .fact-list__label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-text);
+  }
+
+  .fact-list__value {
+    color: var(--heading);
+    font-weight: 600;
+  }
+}

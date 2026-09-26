@@ -1,0 +1,267 @@
+.contact {
+  display: grid;
+
+  @include up($bp-lg) {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    min-height: calc(100vh - var(--header-h));
+  }
+
+  &__panel {
+    background: var(--tint);
+    position: relative;
+    overflow: clip; // not "hidden": that would make this the sticky container for the inner panel
+    padding: clamp(40px, 6vw, 80px) var(--gutter);
+
+    @include up($bp-lg) {
+      padding-left: max(var(--gutter), calc((100vw - var(--container)) / 2));
+      padding-right: clamp(40px, 5vw, 80px);
+    }
+  }
+
+  &__panel-inner {
+    position: relative;
+    display: grid;
+    gap: 22px;
+    align-content: start;
+    max-width: 560px;
+
+    @include up($bp-lg) {
+      position: sticky;
+      top: calc(var(--header-h) + 48px);
+    }
+  }
+
+  &__title {
+    font-size: clamp(2.3rem, 3.5vw + 0.8rem, 4rem);
+    line-height: 1.03;
+    letter-spacing: -0.04em;
+    font-weight: 700;
+  }
+
+  &__steps {
+    margin-top: 16px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line-strong);
+
+    ol {
+      list-style: none;
+      margin: 16px 0 0;
+      padding: 0;
+      display: grid;
+      gap: 14px;
+    }
+
+    li {
+      display: grid;
+      grid-template-columns: 32px 1fr;
+      gap: 8px;
+      color: var(--heading);
+      font-size: 0.97rem;
+
+      .mono {
+        color: var(--accent-text);
+        font-size: 0.75rem;
+        padding-top: 4px;
+      }
+    }
+
+    // Phones: the process list is secondary to the form
+    @include down($bp-md) {
+      display: none;
+    }
+  }
+
+  &__steps-label {
+    color: var(--muted);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  &__details {
+    list-style: none;
+    margin: 12px 0 0;
+    padding: 24px 0 0;
+    border-top: 1px solid var(--line-strong);
+    display: grid;
+    gap: 12px;
+
+    li {
+      display: grid;
+      grid-template-columns: 20px 1fr;
+      gap: 12px;
+      align-items: start;
+      overflow-wrap: anywhere;
+
+      svg {
+        margin-top: 4px;
+        color: var(--accent-text);
+      }
+    }
+
+    a:hover {
+      color: var(--accent-text);
+    }
+  }
+
+  &__form {
+    background: var(--surface);
+    padding: clamp(40px, 6vw, 80px) var(--gutter);
+
+    @include up($bp-lg) {
+      padding-left: clamp(40px, 5vw, 80px);
+      padding-right: max(var(--gutter), calc((100vw - var(--container)) / 2));
+    }
+  }
+
+  &__form-inner {
+    max-width: 640px;
+  }
+
+  &__form-intro {
+    margin-top: 8px;
+    font-size: 0.9rem;
+  }
+}
+
+.contact-form {
+  margin-top: 32px;
+  display: grid;
+  gap: 36px;
+
+  &__group {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+  }
+
+  &__legend {
+    padding: 0;
+    margin-bottom: 18px;
+    font-weight: 700;
+    color: var(--heading);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .mono {
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--accent-text);
+    }
+  }
+
+  &__grid {
+    display: grid;
+    gap: 18px 20px;
+
+    @include up($bp-sm) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__submit {
+    display: grid;
+    gap: 16px;
+    justify-items: start;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+
+    @include down($bp-sm) {
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--heading);
+  }
+
+  &__optional {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    min-height: 50px;
+    padding: 12px 14px;
+    background: var(--bg);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius);
+    color: var(--heading);
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+
+    &::placeholder {
+      color: var(--muted);
+    }
+
+    &:hover {
+      border-color: var(--muted);
+    }
+
+    &:focus {
+      outline: none;
+      background: var(--surface);
+      border-color: var(--orange-500);
+      box-shadow: 0 0 0 3px rgba(242, 107, 29, 0.18);
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    line-height: 1.55;
+  }
+}
+
+.form-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.95rem;
+  padding: 14px 16px;
+  border-radius: var(--radius);
+
+  svg {
+    flex: none;
+    font-size: 1.25rem;
+    margin-top: 1px;
+  }
+
+  &--success {
+    background: rgba(26, 127, 90, 0.1);
+    color: #16704f;
+  }
+
+  &--error {
+    background: rgba(200, 40, 40, 0.08);
+    color: #b3261e;
+  }
+}
+
+:root[data-theme="dark"] {
+  .form-message--success {
+    color: #6fd3a8;
+  }
+
+  .form-message--error {
+    color: #ff8f86;
+  }
+}

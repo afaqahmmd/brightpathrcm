@@ -1,0 +1,41 @@
+.specialities-wrapper {
+	.header {
+		margin-top: 1rem;
+		position: relative;
+		width: 100%;
+		height: 300px;
+		.header-img {
+			object-fit: cover;
+			border-radius: 20px;
+			object-position: 0 70%;
+		}
+	}
+	h1 {
+		text-align: center;
+		margin-top: 2rem;
+	}
+	.sub-text {
+		text-align: center;
+		max-width: 700px;
+		margin: 0.5rem auto 2rem;
+		color: $textFused;
+	}
+	.speciality-card-container {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+		gap: 1.5rem;
+		margin-bottom: 3rem;
+	}
+}
+
+@include device("mobile") {
+	.specialities-wrapper {
+		.header {
+			height: 200px;
+		}
+		.speciality-card-container {
+			grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+			gap: 1rem;
+		}
+	}
+}

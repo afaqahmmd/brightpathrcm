@@ -1,0 +1,53 @@
+.blog-index {
+  &__lead {
+    display: grid;
+    gap: 24px;
+    padding-bottom: clamp(56px, 7vw, 96px);
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--line-strong);
+
+    .mono {
+      font-size: 0.8rem;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    gap: 48px 32px;
+
+    @include up($bp-sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include up($bp-lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    // Phones: compact rows with a thumbnail instead of full-width images
+    @include down($bp-sm) {
+      gap: 0;
+
+      .blog-card__link {
+        grid-template-columns: 96px 1fr;
+        gap: 16px;
+        padding: 20px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .blog-card__media {
+        aspect-ratio: 1;
+      }
+
+      .blog-card__title {
+        font-size: 1.05rem;
+      }
+    }
+  }
+}

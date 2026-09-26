@@ -1,0 +1,70 @@
+.coverage {
+  background: var(--surface);
+  border-block: 1px solid var(--line);
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include up($bp-md) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__item {
+    display: grid;
+    gap: 8px;
+    align-content: start;
+    padding: 28px 20px 28px 0;
+    border-bottom: 1px solid var(--line);
+
+    &:nth-child(odd) {
+      padding-right: 20px;
+      border-right: 1px solid var(--line);
+    }
+
+    &:nth-child(even) {
+      padding-left: 20px;
+    }
+
+    @include up($bp-md) {
+      padding: 40px 28px !important;
+      border-bottom: 0;
+      border-right: 1px solid var(--line);
+
+      &:first-child {
+        padding-left: 0 !important;
+      }
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+
+    @include down($bp-md) {
+      &:nth-last-child(-n + 2) {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  &__value {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(1.6rem, 2vw + 0.8rem, 2.4rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: var(--heading);
+
+  }
+
+  &__label {
+    font-size: 0.87rem;
+    line-height: 1.45;
+    color: var(--muted);
+    max-width: 24ch;
+  }
+}

@@ -1,0 +1,73 @@
+// BrightPathRCM design tokens.
+// Brand colours are fixed; surface/text tokens switch with [data-theme].
+
+:root {
+  // Brand
+  --navy-950: #050d1c;
+  --navy-900: #0a1b37;
+  --navy-800: #102a52;
+  --navy-700: #1a3a6b;
+  --navy-300: #8fa3c4;
+  --navy-100: #e3e9f2;
+  --orange-500: #f26b1d;
+  --orange-400: #ff8a45;
+  --orange-600: #c2500a; // AA-safe orange for text on light surfaces
+  --orange-100: #fde9da;
+
+  // Surfaces & text (light)
+  --bg: #f6f4ef;
+  --surface: #ffffff;
+  --surface-2: #eeebe3;
+  --tint: #edf1f7; // pale navy wash for alternating light sections
+  --grid-line: rgba(10, 27, 55, 0.05);
+  --heading: #0a1b37;
+  --text: #3a4659;
+  --muted: #677386;
+  --line: rgba(10, 27, 55, 0.12);
+  --line-strong: rgba(10, 27, 55, 0.24);
+  --accent-text: var(--orange-600);
+  --shadow-sm: 0 1px 2px rgba(10, 27, 55, 0.06);
+  --shadow-md: 0 18px 40px -24px rgba(10, 27, 55, 0.35);
+
+  // On-navy (constant in both themes)
+  --on-navy: #f4f1ea;
+  --on-navy-muted: #a9b6cc;
+  --on-navy-line: rgba(255, 255, 255, 0.12);
+
+  // Type
+  --font-display: var(--font-jakarta), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body: var(--font-manrope), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  // Layout
+  --container: 1240px;
+  --gutter: clamp(20px, 4vw, 40px);
+  --section-y: clamp(72px, 9vw, 136px);
+  --radius: 4px;
+  --radius-lg: 10px;
+  --header-h: 72px;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  color-scheme: light;
+}
+
+@mixin dark-tokens {
+  --bg: #06101f;
+  --surface: #0b1a31;
+  --surface-2: #10223f;
+  --tint: #0d1d38;
+  --grid-line: rgba(255, 255, 255, 0.045);
+  --heading: #f4f1ea;
+  --text: #c2cbd9;
+  --muted: #8d99ae;
+  --line: rgba(255, 255, 255, 0.1);
+  --line-strong: rgba(255, 255, 255, 0.22);
+  --accent-text: var(--orange-400);
+  --shadow-sm: none;
+  --shadow-md: 0 18px 40px -24px rgba(0, 0, 0, 0.8);
+  color-scheme: dark;
+}
+
+:root[data-theme="dark"] {
+  @include dark-tokens;
+}

@@ -1,0 +1,118 @@
+.site-footer {
+  @include on-navy;
+  background: var(--navy-950);
+  padding-top: clamp(64px, 8vw, 104px);
+  overflow: hidden;
+
+  &__top {
+    display: grid;
+    gap: 48px 32px;
+    grid-template-columns: 1fr 1fr;
+
+    @include up($bp-md) {
+      grid-template-columns: 1.5fr 1fr 0.8fr 1.2fr;
+    }
+  }
+
+  &__brand {
+    grid-column: 1 / -1;
+    display: grid;
+    gap: 22px;
+    justify-items: start;
+    max-width: 380px;
+
+    @include up($bp-md) {
+      grid-column: auto;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
+  }
+
+  &__label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--orange-400);
+    margin-bottom: 18px;
+  }
+
+  &__col {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    a {
+      font-size: 0.93rem;
+      color: var(--on-navy-muted);
+      transition: color 0.2s;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  &__contact {
+    li {
+      display: grid;
+      grid-template-columns: 18px 1fr;
+      gap: 10px;
+      align-items: start;
+      font-size: 0.93rem;
+      overflow-wrap: anywhere;
+
+      svg {
+        margin-top: 4px;
+        color: var(--orange-400);
+      }
+    }
+  }
+
+  &__socials {
+    margin-top: 20px !important;
+    grid-auto-flow: column;
+    justify-content: start;
+    gap: 16px !important;
+  }
+
+  &__wordmark {
+    margin-top: clamp(56px, 8vw, 96px);
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(2.6rem, 10.5vw, 9rem);
+    line-height: 1;
+    padding-bottom: 0.12em;
+    letter-spacing: -0.05em;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.14);
+    white-space: nowrap;
+    user-select: none;
+
+    span {
+      -webkit-text-stroke: 1px rgba(242, 107, 29, 0.45);
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px 24px;
+    padding-block: 24px 32px;
+    margin-top: 24px;
+    border-top: 1px solid var(--on-navy-line);
+    font-size: 0.8rem;
+
+    .mono {
+      letter-spacing: 0.06em;
+    }
+  }
+}

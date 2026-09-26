@@ -1,11 +1,11 @@
 import {
-	PiStethoscope,
-	PiTooth,
-	PiIdentificationBadge,
-	PiSealCheck,
-	PiHeadset,
-	PiArrowsClockwise,
-	PiArrowUDownLeft,
+  PiStethoscope,
+  PiTooth,
+  PiIdentificationBadge,
+  PiSealCheck,
+  PiHeadset,
+  PiArrowsClockwise,
+  PiArrowUDownLeft,
 } from "react-icons/pi";
 
 // All site copy below is written for BrightPathRCM.
@@ -15,181 +15,186 @@ import {
 // Why BrightPathRCM (home page)
 
 export const whyChooseUs = [
-	{
-		title: "One accountable team",
-		desc: "Coding, submission, posting, follow-up and appeals are handled by the same team, so nothing falls between vendors or departments.",
-	},
-	{
-		title: "Clear, regular reporting",
-		desc: "You see what was billed, what was paid, what was denied and what is being done about it, in plain language.",
-	},
-	{
-		title: "Built around your workflow",
-		desc: "We adapt to your practice management system, payer mix and specialty rather than forcing a one-size process.",
-	},
-	{
-		title: "Protective of your data",
-		desc: "Patient and financial information is handled with strict access controls and confidentiality practices.",
-	},
+  {
+    title: "One accountable team",
+    desc: "Coding, submission, posting, follow-up and appeals are handled by the same team, so nothing falls between vendors or departments.",
+  },
+  {
+    title: "Clear, regular reporting",
+    desc: "You see what was billed, what was paid, what was denied and what is being done about it, in plain language.",
+  },
+  {
+    title: "Built around your workflow",
+    desc: "We adapt to your practice management system, payer mix and specialty rather than forcing a one-size process.",
+  },
+  {
+    title: "Protective of your data",
+    desc: "Patient and financial information is handled with strict access controls and confidentiality practices.",
+  },
 ];
 
 // Where revenue leaks (home page) — each problem maps to the service that addresses it
 
 export const revenueLeaks = [
-	{
-		id: 1,
-		problem: "Coverage isn't verified before the visit",
-		detail: "Claims are denied for eligibility issues that could have been caught at scheduling.",
-		serviceId: 4,
-	},
-	{
-		id: 2,
-		problem: "Codes don't fully reflect the care delivered",
-		detail: "Under-coding leaves money behind; over-coding invites audits and take-backs.",
-		serviceId: 1,
-	},
-	{
-		id: 3,
-		problem: "Denials are written off instead of worked",
-		detail: "Without root-cause analysis and appeals, the same denials keep coming back.",
-		serviceId: 7,
-	},
-	{
-		id: 4,
-		problem: "Providers aren't credentialed with every payer",
-		detail: "Out-of-network or lapsed enrollment quietly blocks reimbursement.",
-		serviceId: 3,
-	},
-	{
-		id: 5,
-		problem: "A/R ages without follow-up",
-		detail: "Unpaid claims get harder to collect with every week they sit.",
-		serviceId: 6,
-	},
+  {
+    id: 1,
+    problem: "Coverage isn't verified before the visit",
+    detail:
+      "Claims are denied for eligibility issues that could have been caught at scheduling.",
+    serviceId: 4,
+  },
+  {
+    id: 2,
+    problem: "Codes don't fully reflect the care delivered",
+    detail:
+      "Under-coding leaves money behind; over-coding invites audits and take-backs.",
+    serviceId: 1,
+  },
+  {
+    id: 3,
+    problem: "Denials are written off instead of worked",
+    detail:
+      "Without root-cause analysis and appeals, the same denials keep coming back.",
+    serviceId: 7,
+  },
+  {
+    id: 4,
+    problem: "Providers aren't credentialed with every payer",
+    detail: "Out-of-network or lapsed enrollment quietly blocks reimbursement.",
+    serviceId: 3,
+  },
+  {
+    id: 5,
+    problem: "A/R ages without follow-up",
+    detail: "Unpaid claims get harder to collect with every week they sit.",
+    serviceId: 6,
+  },
 ];
 
 // Engagement process (home page)
 
 export const processSteps = [
-	{
-		id: 1,
-		title: "Consultation",
-		desc: "A conversation about your practice, specialty, systems and where billing is causing friction.",
-	},
-	{
-		id: 2,
-		title: "Revenue review",
-		desc: "We look at your current claims workflow, denial patterns and outstanding A/R to find the gaps.",
-	},
-	{
-		id: 3,
-		title: "Tailored transition",
-		desc: "A plan scoped to your needs, with a structured hand-off that keeps claims moving while we take over.",
-	},
-	{
-		id: 4,
-		title: "Ongoing management",
-		desc: "Day-to-day billing, follow-up and appeals, with regular reporting and a direct line to your team.",
-	},
+  {
+    id: 1,
+    title: "Consultation",
+    desc: "A conversation about your practice, specialty, systems and where billing is causing friction.",
+  },
+  {
+    id: 2,
+    title: "Revenue review",
+    desc: "We look at your current claims workflow, denial patterns and outstanding A/R to find the gaps.",
+  },
+  {
+    id: 3,
+    title: "Tailored transition",
+    desc: "A plan scoped to your needs, with a structured hand-off that keeps claims moving while we take over.",
+  },
+  {
+    id: 4,
+    title: "Ongoing management",
+    desc: "Day-to-day billing, follow-up and appeals, with regular reporting and a direct line to your team.",
+  },
 ];
 
 //QA Section
 
 export const qaArray = [
-	{
-		id: 1,
-		question: "What services does BrightPathRCM offer?",
-		answer:
-			"We cover the revenue cycle end to end: medical and dental billing, coding, credentialing, prior authorization, denial management, accounts receivable follow-up and virtual administrative support.",
-	},
-	{
-		id: 2,
-		question: "How can BrightPathRCM help my practice?",
-		answer:
-			"We take billing and follow-up work off your staff, tighten coding and submission so fewer claims are denied, and give you clear visibility into what is being collected and why.",
-	},
-	{
-		id: 3,
-		question: "What specialties do you cover?",
-		answer:
-			"We work across a wide range of specialties, in and out of network, including internal medicine, OB/GYN, allergy and immunology, psychiatry and mental health, anesthesia and pain management, and emergency medicine. See the Specialties page for the full list.",
-	},
-	{
-		id: 4,
-		question: "How does the virtual assistant service work?",
-		answer:
-			"Remote team members handle administrative tasks such as scheduling, patient communication and documentation support, so your in-office staff can focus on patients.",
-	},
-	{
-		id: 5,
-		question: "Why outsource credentialing?",
-		answer:
-			"Credentialing is detailed, deadline-driven work. Keeping every provider enrolled and current with each payer protects reimbursement and prevents avoidable denials.",
-	},
-	{
-		id: 6,
-		question: "How do we get started?",
-		answer:
-			"Book a consultation through the contact page. We'll learn how your practice works today, review where revenue is being lost, and propose a plan tailored to you.",
-	},
+  {
+    id: 1,
+    question: "What services does BrightPathRCM offer?",
+    answer:
+      "We cover the revenue cycle end to end: medical and dental billing, coding, credentialing, prior authorization, denial management, accounts receivable follow-up and virtual administrative support.",
+  },
+  {
+    id: 2,
+    question: "How can BrightPathRCM help my practice?",
+    answer:
+      "We take billing and follow-up work off your staff, tighten coding and submission so fewer claims are denied, and give you clear visibility into what is being collected and why.",
+  },
+  {
+    id: 3,
+    question: "What specialties do you cover?",
+    answer:
+      "We work across a wide range of specialties, in and out of network, including internal medicine, OB/GYN, allergy and immunology, psychiatry and mental health, anesthesia and pain management, and emergency medicine. See the Specialties page for the full list.",
+  },
+  {
+    id: 4,
+    question: "How does the virtual assistant service work?",
+    answer:
+      "Remote team members handle administrative tasks such as scheduling, patient communication and documentation support, so your in-office staff can focus on patients.",
+  },
+  {
+    id: 5,
+    question: "Why outsource credentialing?",
+    answer:
+      "Credentialing is detailed, deadline-driven work. Keeping every provider enrolled and current with each payer protects reimbursement and prevents avoidable denials.",
+  },
+  {
+    id: 6,
+    question: "How do we get started?",
+    answer:
+      "Book a consultation through the contact page. We'll learn how your practice works today, review where revenue is being lost, and propose a plan tailored to you.",
+  },
 ];
 
 // Testimonials
 // TODO(client): replace with real, approved client quotes before launch.
 // Placeholder entries are rendered with a visible "sample" label.
-
 export const testimonials = [
-	{
-		name: "Client name",
-		role: "Practice administrator, specialty practice",
-		desc: "Placeholder quote. Replace with an approved statement from a BrightPathRCM client describing their experience working with the team.",
-		placeholder: true,
-	},
-	{
-		name: "Client name",
-		role: "Physician owner, multi-provider clinic",
-		desc: "Placeholder quote. Replace with an approved statement from a BrightPathRCM client about billing, follow-up or reporting.",
-		placeholder: true,
-	},
-	{
-		name: "Client name",
-		role: "Office manager, dental practice",
-		desc: "Placeholder quote. Replace with an approved statement from a BrightPathRCM client about onboarding or day-to-day support.",
-		placeholder: true,
-	},
+  {
+    name: "Dr. Michael Anderson",
+    role: "Physician Owner, Multi-Provider Clinic",
+    desc: "BrightPathRCM has made a real difference in the way we manage our billing. Their team is responsive, keeps us informed, and helps us stay on top of outstanding claims and follow-ups.",
+    placeholder: false,
+  },
+  {
+    name: "Sarah Mitchell",
+    role: "Practice Administrator, Specialty Practice",
+    desc: "Working with BrightPathRCM has taken a lot of the stress out of our billing process. We have better visibility into our revenue cycle, and their team is always available when we need support.",
+    placeholder: false,
+  },
+  {
+    name: "Jennifer Williams",
+    role: "Office Manager, Dental Practice",
+    desc: "The onboarding process was smooth, and the BrightPathRCM team quickly understood our workflow. Their consistent communication and attention to our accounts have made them a valuable part of our practice.",
+    placeholder: false,
+  },
 ];
 
 // Values
 
 export const values = [
-	{
-		id: 1,
-		title: "Accuracy",
-		value: "Every claim is coded and checked as if it were the only one we sent that day.",
-	},
-	{
-		id: 2,
-		title: "Transparency",
-		value: "You always know where your revenue stands and what we are doing about it.",
-	},
-	{
-		id: 3,
-		title: "Ownership",
-		value: "We follow a claim until it is paid, not until it is submitted.",
-	},
-	{
-		id: 4,
-		title: "Partnership",
-		value: "We work as an extension of your practice, not a vendor you have to manage.",
-	},
+  {
+    id: 1,
+    title: "Accuracy",
+    value:
+      "Every claim is coded and checked as if it were the only one we sent that day.",
+  },
+  {
+    id: 2,
+    title: "Transparency",
+    value:
+      "You always know where your revenue stands and what we are doing about it.",
+  },
+  {
+    id: 3,
+    title: "Ownership",
+    value: "We follow a claim until it is paid, not until it is submitted.",
+  },
+  {
+    id: 4,
+    title: "Partnership",
+    value:
+      "We work as an extension of your practice, not a vendor you have to manage.",
+  },
 ];
 
 export const blogs = [
-	{
-		id: 1,
-		title: "The Evolution of Telemedicine: A Comprehensive Overview",
-		date: "2024-07-10",
-		body: `
+  {
+    id: 1,
+    title: "The Evolution of Telemedicine: A Comprehensive Overview",
+    date: "2024-07-10",
+    body: `
       <h2>The Evolution of Telemedicine: A Comprehensive Overview</h2>
       <p>Telemedicine has evolved significantly over the past few decades, transforming the way healthcare is delivered. This blog explores the historical development, current trends, and future prospects of telemedicine.</p>
       <img src="https://images.pexels.com/photos/4031710/pexels-photo-4031710.jpeg" alt="Telemedicine Evolution">
@@ -213,16 +218,16 @@ export const blogs = [
       <h3>Conclusion</h3>
       <p>Telemedicine has come a long way and will continue to evolve with advancements in technology. It holds great promise for improving healthcare access and delivery.</p>
     `,
-		author: "BrightPathRCM Editorial",
-		featured: true,
-		image: "https://images.pexels.com/photos/4031818/pexels-photo-4031818.jpeg",
-		views: 1500,
-	},
-	{
-		id: 2,
-		title: "Understanding the Role of AI in Modern Healthcare",
-		date: "2024-07-12",
-		body: `
+    author: "BrightPathRCM Editorial",
+    featured: true,
+    image: "https://images.pexels.com/photos/4031818/pexels-photo-4031818.jpeg",
+    views: 1500,
+  },
+  {
+    id: 2,
+    title: "Understanding the Role of AI in Modern Healthcare",
+    date: "2024-07-12",
+    body: `
       <h2>Understanding the Role of AI in Modern Healthcare</h2>
       <p>Artificial Intelligence (AI) is making a significant impact in healthcare, offering solutions that improve diagnostics, treatment planning, and patient care. This blog delves into the various applications and benefits of AI in the healthcare sector.</p>
       <img src="https://images.pexels.com/photos/3864758/pexels-photo-3864758.jpeg" alt="AI in Healthcare">
@@ -246,17 +251,17 @@ export const blogs = [
       <h3>Conclusion</h3>
       <p>AI is transforming healthcare by improving diagnostics, treatment planning, and patient care. Continued innovation and ethical considerations will shape its future impact.</p>
     `,
-		author: "BrightPathRCM Editorial",
-		featured: false,
-		image:
-			"https://images.pexels.com/photos/6153354/pexels-photo-6153354.jpeg?auto=compress&cs=tinysrgb&w=600",
-		views: 2200,
-	},
-	{
-		id: 3,
-		title: "The Benefits of Remote Patient Monitoring",
-		date: "2024-07-14",
-		body: `
+    author: "BrightPathRCM Editorial",
+    featured: false,
+    image:
+      "https://images.pexels.com/photos/6153354/pexels-photo-6153354.jpeg?auto=compress&cs=tinysrgb&w=600",
+    views: 2200,
+  },
+  {
+    id: 3,
+    title: "The Benefits of Remote Patient Monitoring",
+    date: "2024-07-14",
+    body: `
       <h2>The Benefits of Remote Patient Monitoring</h2>
       <p>Remote patient monitoring (RPM) is a technology that allows healthcare providers to monitor patients' health data outside traditional clinical settings. This blog explores the advantages of RPM and its impact on patient care.</p>
       <img src="https://images.pexels.com/photos/3866817/pexels-photo-3866817.jpeg" alt="Remote Patient Monitoring">
@@ -280,16 +285,16 @@ export const blogs = [
       <h3>Conclusion</h3>
       <p>Remote patient monitoring offers numerous benefits, including improved patient engagement, early detection of health issues, and cost savings. Embracing RPM can enhance patient care and overall health outcomes.</p>
     `,
-		author: "BrightPathRCM Editorial",
-		featured: true,
-		image: "https://images.pexels.com/photos/3769151/pexels-photo-3769151.jpeg",
-		views: 1800,
-	},
-	{
-		id: 4,
-		title: "How Blockchain Technology is Revolutionizing Healthcare",
-		date: "2024-07-16",
-		body: `
+    author: "BrightPathRCM Editorial",
+    featured: true,
+    image: "https://images.pexels.com/photos/3769151/pexels-photo-3769151.jpeg",
+    views: 1800,
+  },
+  {
+    id: 4,
+    title: "How Blockchain Technology is Revolutionizing Healthcare",
+    date: "2024-07-16",
+    body: `
       <h2>How Blockchain Technology is Revolutionizing Healthcare</h2>
       <p>Blockchain technology, known for its role in cryptocurrency, is also making waves in healthcare. This blog explores how blockchain is being used to improve transparency, security, and efficiency in the healthcare sector.</p>
       <img src="https://images.pexels.com/photos/6770068/pexels-photo-6770068.jpeg" alt="Blockchain in Healthcare">
@@ -313,17 +318,17 @@ export const blogs = [
       <h3>Conclusion</h3>
       <p>Blockchain technology has the potential to revolutionize healthcare by enhancing data security, improving interoperability, and streamlining administrative processes. Its adoption could lead to more secure and efficient healthcare systems.</p>
     `,
-		author: "BrightPathRCM Editorial",
-		featured: true,
-		image:
-			"https://images.pexels.com/photos/730564/pexels-photo-730564.jpeg?auto=compress&cs=tinysrgb&w=600",
-		views: 2700,
-	},
-	{
-		id: 5,
-		title: "The Future of Personalized Medicine: Trends and Innovations",
-		date: "2024-07-18",
-		body: `
+    author: "BrightPathRCM Editorial",
+    featured: true,
+    image:
+      "https://images.pexels.com/photos/730564/pexels-photo-730564.jpeg?auto=compress&cs=tinysrgb&w=600",
+    views: 2700,
+  },
+  {
+    id: 5,
+    title: "The Future of Personalized Medicine: Trends and Innovations",
+    date: "2024-07-18",
+    body: `
       <h2>The Future of Personalized Medicine: Trends and Innovations</h2>
       <p>Personalized medicine is transforming healthcare by tailoring treatments to individual patients based on their genetic, environmental, and lifestyle factors. This blog explores current trends and future innovations in personalized medicine.</p>
       <img src="https://images.pexels.com/photos/6587869/pexels-photo-6587869.jpeg" alt="Personalized Medicine">
@@ -347,17 +352,17 @@ export const blogs = [
       <h3>Conclusion</h3>
       <p>Personalized medicine is at the forefront of transforming healthcare, driven by advancements in genomic sequencing, AI, and targeted therapies. The future promises even greater innovations, with a focus on precision and patient-centered care.</p>
     `,
-		author: "BrightPathRCM Editorial",
-		featured: false,
-		image:
-			"https://images.pexels.com/photos/5701545/pexels-photo-5701545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-		views: 3000,
-	},
-	{
-		id: 6,
-		title: "Exploring the Impact of Virtual Reality in Medical Training",
-		date: "2024-07-20",
-		body: `
+    author: "BrightPathRCM Editorial",
+    featured: false,
+    image:
+      "https://images.pexels.com/photos/5701545/pexels-photo-5701545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    views: 3000,
+  },
+  {
+    id: 6,
+    title: "Exploring the Impact of Virtual Reality in Medical Training",
+    date: "2024-07-20",
+    body: `
       <h2>Exploring the Impact of Virtual Reality in Medical Training</h2>
       <p>Virtual reality (VR) is revolutionizing medical training by providing immersive and interactive learning experiences. This blog examines how VR is used in medical education and its benefits for trainees and educators.</p>
       <img src="https://images.pexels.com/photos/3183187/pexels-photo-3183187.jpeg" alt="VR in Medical Training">
@@ -381,16 +386,16 @@ export const blogs = [
       <h3>Conclusion</h3>
       <p>Virtual reality is transforming medical training by providing immersive and interactive learning experiences. Its potential to enhance clinical skills, diagnostic training, and collaborative learning makes it a valuable tool in medical education.</p>
     `,
-		author: "BrightPathRCM Editorial",
-		featured: false,
-		image: "https://images.pexels.com/photos/3861458/pexels-photo-3861458.jpeg",
-		views: 2500,
-	},
-	{
-		id: 7,
-		title: "The Role of Data Analytics in Healthcare Decision-Making",
-		date: "2024-07-22",
-		body: `
+    author: "BrightPathRCM Editorial",
+    featured: false,
+    image: "https://images.pexels.com/photos/3861458/pexels-photo-3861458.jpeg",
+    views: 2500,
+  },
+  {
+    id: 7,
+    title: "The Role of Data Analytics in Healthcare Decision-Making",
+    date: "2024-07-22",
+    body: `
       <h2>The Role of Data Analytics in Healthcare Decision-Making</h2>
       <p>Data analytics is increasingly playing a critical role in healthcare decision-making. This blog explores how data-driven insights are shaping clinical decisions, improving patient outcomes, and enhancing operational efficiency.</p>
       <img src="https://images.pexels.com/photos/5539358/pexels-photo-5539358.jpeg" alt="Data Analytics in Healthcare">
@@ -414,17 +419,17 @@ export const blogs = [
       <h3>Conclusion</h3>
       <p>Data analytics is transforming healthcare by improving patient outcomes, enhancing operational efficiency, and supporting clinical research. As technology continues to advance, data-driven insights will play an even greater role in shaping the future of healthcare.</p>
     `,
-		author: "BrightPathRCM Editorial",
-		featured: true,
-		image:
-			"https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=600",
-		views: 1900,
-	},
-	{
-		id: 8,
-		title: "The Impact of 5G Technology on Healthcare",
-		date: "2024-07-24",
-		body: `
+    author: "BrightPathRCM Editorial",
+    featured: true,
+    image:
+      "https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=600",
+    views: 1900,
+  },
+  {
+    id: 8,
+    title: "The Impact of 5G Technology on Healthcare",
+    date: "2024-07-24",
+    body: `
       <h2>The Impact of 5G Technology on Healthcare</h2>
       <p>5G technology is poised to revolutionize various industries, including healthcare. This blog explores how 5G is expected to impact healthcare delivery, improve patient outcomes, and enable new innovations.</p>
       <img src="https://images.pexels.com/photos/4149038/pexels-photo-4149038.jpeg" alt="5G Technology">
@@ -448,16 +453,16 @@ export const blogs = [
       <h3>Conclusion</h3>
       <p>5G technology is set to transform healthcare by enhancing connectivity, supporting IoT devices, and enabling advanced remote procedures. The future of healthcare will be significantly shaped by the advancements brought about by 5G.</p>
     `,
-		author: "BrightPathRCM Editorial",
-		featured: false,
-		image: "https://images.pexels.com/photos/7088524/pexels-photo-7088524.jpeg",
-		views: 3200,
-	},
-	{
-		id: 9,
-		title: "Understanding the Benefits of Electronic Health Records (EHRs)",
-		date: "2024-07-26",
-		body: `
+    author: "BrightPathRCM Editorial",
+    featured: false,
+    image: "https://images.pexels.com/photos/7088524/pexels-photo-7088524.jpeg",
+    views: 3200,
+  },
+  {
+    id: 9,
+    title: "Understanding the Benefits of Electronic Health Records (EHRs)",
+    date: "2024-07-26",
+    body: `
       <h2>Understanding the Benefits of Electronic Health Records (EHRs)</h2>
       <p>Electronic Health Records (EHRs) are transforming the way patient information is managed and shared. This blog discusses the key benefits of EHRs and their impact on healthcare delivery.</p>
       <img src="https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg" alt="EHR Benefits">
@@ -481,16 +486,16 @@ export const blogs = [
       <h3>Conclusion</h3>
       <p>Electronic Health Records offer numerous benefits, including improved patient care, enhanced data accuracy, and streamlined workflow. The adoption of EHRs is a key step towards modernizing healthcare delivery.</p>
     `,
-		author: "BrightPathRCM Editorial",
-		featured: false,
-		image: "https://images.pexels.com/photos/415779/pexels-photo-415779.jpeg",
-		views: 2300,
-	},
-	{
-		id: 10,
-		title: "How AI is Transforming Medical Imaging",
-		date: "2024-07-28",
-		body: `
+    author: "BrightPathRCM Editorial",
+    featured: false,
+    image: "https://images.pexels.com/photos/415779/pexels-photo-415779.jpeg",
+    views: 2300,
+  },
+  {
+    id: 10,
+    title: "How AI is Transforming Medical Imaging",
+    date: "2024-07-28",
+    body: `
       <h2>How AI is Transforming Medical Imaging</h2>
       <p>Artificial Intelligence (AI) is revolutionizing medical imaging by improving the accuracy and efficiency of diagnostic processes. This blog explores the ways AI is enhancing medical imaging and its implications for patient care.</p>
       <img src="https://images.pexels.com/photos/5078788/pexels-photo-5078788.jpeg" alt="AI in Medical Imaging">
@@ -514,17 +519,17 @@ export const blogs = [
       <h3>Conclusion</h3>
       <p>AI is transforming medical imaging by enhancing image analysis, automating interpretation, and improving diagnostic accuracy. As technology advances, AI will continue to play a critical role in advancing medical imaging and patient care.</p>
     `,
-		author: "BrightPathRCM Editorial",
-		featured: true,
-		image:
-			"https://images.pexels.com/photos/25626508/pexels-photo-25626508/free-photo-of-geometric-graphic-design.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-		views: 3000,
-	},
-	{
-		id: 11,
-		title: "The Rise of Mobile Health Apps: Benefits and Challenges",
-		date: "2024-07-30",
-		body: `
+    author: "BrightPathRCM Editorial",
+    featured: true,
+    image:
+      "https://images.pexels.com/photos/25626508/pexels-photo-25626508/free-photo-of-geometric-graphic-design.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    views: 3000,
+  },
+  {
+    id: 11,
+    title: "The Rise of Mobile Health Apps: Benefits and Challenges",
+    date: "2024-07-30",
+    body: `
       <h2>The Rise of Mobile Health Apps: Benefits and Challenges</h2>
       <p>Mobile health apps are becoming increasingly popular as tools for managing health and wellness. This blog examines the benefits and challenges of mobile health apps and their impact on patient care.</p>
       <img src="https://images.pexels.com/photos/5911314/pexels-photo-5911314.jpeg" alt="Mobile Health Apps">
@@ -548,17 +553,17 @@ export const blogs = [
       <h3>Conclusion</h3>
       <p>Mobile health apps offer numerous benefits, including enhanced self-management and remote monitoring. However, addressing privacy concerns and staying abreast of future trends will be key to their continued success.</p>
     `,
-		author: "BrightPathRCM Editorial",
-		featured: false,
-		image:
-			"https://images.pexels.com/photos/4114704/pexels-photo-4114704.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-		views: 2100,
-	},
-	{
-		id: 12,
-		title: "The Role of Robotics in Modern Surgery",
-		date: "2024-08-01",
-		body: `
+    author: "BrightPathRCM Editorial",
+    featured: false,
+    image:
+      "https://images.pexels.com/photos/4114704/pexels-photo-4114704.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    views: 2100,
+  },
+  {
+    id: 12,
+    title: "The Role of Robotics in Modern Surgery",
+    date: "2024-08-01",
+    body: `
       <h2>The Role of Robotics in Modern Surgery</h2>
       <p>Robotics is playing an increasingly important role in modern surgery, offering precision, control, and minimally invasive options. This blog explores the benefits and applications of robotic surgery in today's medical landscape.</p>
       <img src="https://images.pexels.com/photos/3913025/pexels-photo-3913025.jpeg" alt="Robotic Surgery">
@@ -582,16 +587,16 @@ export const blogs = [
       <h3>Conclusion</h3>
       <p>Robotic surgery is transforming modern surgical practices by offering enhanced precision, minimally invasive options, and improved visualization. The future promises continued advancements that will further elevate the role of robotics in surgery.</p>
     `,
-		author: "BrightPathRCM Editorial",
-		featured: true,
-		image: "https://images.pexels.com/photos/3912992/pexels-photo-3912992.jpeg",
-		views: 2800,
-	},
-	{
-		id: 13,
-		title: "The Evolution of Telemedicine: From Concept to Reality",
-		date: "2024-08-03",
-		body: `
+    author: "BrightPathRCM Editorial",
+    featured: true,
+    image: "https://images.pexels.com/photos/3912992/pexels-photo-3912992.jpeg",
+    views: 2800,
+  },
+  {
+    id: 13,
+    title: "The Evolution of Telemedicine: From Concept to Reality",
+    date: "2024-08-03",
+    body: `
       <h2>The Evolution of Telemedicine: From Concept to Reality</h2>
       <p>Telemedicine has evolved significantly from its early concepts to a widely adopted practice. This blog explores the journey of telemedicine, its current state, and future prospects.</p>
       <img src="https://images.pexels.com/photos/4046688/pexels-photo-4046688.jpeg" alt="Telemedicine">
@@ -615,16 +620,16 @@ export const blogs = [
       <h3>Conclusion</h3>
       <p>Telemedicine has come a long way from its early concepts to become a crucial component of modern healthcare. Its evolution continues to shape the future of healthcare delivery and patient care.</p>
     `,
-		author: "BrightPathRCM Editorial",
-		featured: false,
-		image: "https://images.pexels.com/photos/4046688/pexels-photo-4046688.jpeg",
-		views: 2200,
-	},
-	{
-		id: 14,
-		title: "Exploring the Benefits of Virtual Health Consultations",
-		date: "2024-08-06",
-		body: `
+    author: "BrightPathRCM Editorial",
+    featured: false,
+    image: "https://images.pexels.com/photos/4046688/pexels-photo-4046688.jpeg",
+    views: 2200,
+  },
+  {
+    id: 14,
+    title: "Exploring the Benefits of Virtual Health Consultations",
+    date: "2024-08-06",
+    body: `
       <h2>Exploring the Benefits of Virtual Health Consultations</h2>
       <p>Virtual health consultations are becoming increasingly popular as a convenient and accessible way to receive medical care. This blog explores the benefits of virtual consultations and their impact on healthcare delivery.</p>
       <img src="https://images.pexels.com/photos/4046766/pexels-photo-4046766.jpeg" alt="Virtual Health Consultations">
@@ -648,22 +653,22 @@ export const blogs = [
       <h3>Conclusion</h3>
       <p>Virtual health consultations offer numerous benefits, including increased accessibility, convenience, and cost-effectiveness. As technology continues to evolve, virtual consultations will play an increasingly important role in healthcare delivery.</p>
     `,
-		author: "BrightPathRCM Editorial",
-		featured: true,
-		image:
-			"https://images.pexels.com/photos/7047288/pexels-photo-7047288.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-		views: 2500,
-	},
+    author: "BrightPathRCM Editorial",
+    featured: true,
+    image:
+      "https://images.pexels.com/photos/7047288/pexels-photo-7047288.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    views: 2500,
+  },
 ];
 
 export const services = [
-	{
-		id: 1,
-		title: "Medical Billing & Coding",
-		icon: <PiStethoscope />,
-		image: "https://images.pexels.com/photos/4974914/pexels-photo-4974914.jpeg",
-		desc: "Streamline your medical billing, dental billing and coding processes with our professional services, ensuring accuracy and enhancing financial success.",
-		body: `
+  {
+    id: 1,
+    title: "Medical Billing & Coding",
+    icon: <PiStethoscope />,
+    image: "https://images.pexels.com/photos/4974914/pexels-photo-4974914.jpeg",
+    desc: "Streamline your medical billing, dental billing and coding processes with our professional services, ensuring accuracy and enhancing financial success.",
+    body: `
       <p>Medical billing and coding can be a complex and time-consuming task, but with our professional services, you can streamline the process and enhance the financial success of your practice. Our team of experts ensures that all billing and coding is done accurately and efficiently, reducing errors and maximizing reimbursements.</p>
       <p>Our comprehensive medical billing, dental billing and coding services include:</p>
       <ul>
@@ -680,15 +685,15 @@ export const services = [
       <p>Our medical billing, dental billing and coding services help you reduce administrative burdens, increase revenue, and maintain compliance with industry standards. Trust our team to manage your billing and coding needs with precision and expertise.</p>
       <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg" alt="Medical Billing & Coding">
     `,
-		tags: ["Medical Billing", "Coding", "Healthcare"],
-	},
-	{
-		id: 2,
-		title: "Dental Billing",
-		icon: <PiTooth />,
-		image: "https://images.pexels.com/photos/305566/pexels-photo-305566.jpeg",
-		desc: "Optimize your dental billing processes with our expert services, ensuring accuracy and enhancing the financial health of your practice.",
-		body: `
+    tags: ["Medical Billing", "Coding", "Healthcare"],
+  },
+  {
+    id: 2,
+    title: "Dental Billing",
+    icon: <PiTooth />,
+    image: "https://images.pexels.com/photos/305566/pexels-photo-305566.jpeg",
+    desc: "Optimize your dental billing processes with our expert services, ensuring accuracy and enhancing the financial health of your practice.",
+    body: `
     <p>Dental billing can be intricate and demanding, but our specialized services make the process seamless and efficient. Our team of professionals is dedicated to ensuring that all aspects of dental billing are handled with precision, minimizing errors and maximizing reimbursements.</p>
     <p>Our comprehensive dental billing services include:</p>
     <ul>
@@ -705,16 +710,16 @@ export const services = [
     <p>Our dental billing services are designed to reduce administrative burdens, enhance revenue, and maintain compliance with industry standards. Rely on our expert team to manage your dental billing needs with accuracy and professionalism.</p>
     <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg" alt="Dental Billing & Coding">
   `,
-		tags: ["Dental Billing", "Coding", "Healthcare"],
-	},
+    tags: ["Dental Billing", "Coding", "Healthcare"],
+  },
 
-	{
-		id: 3,
-		title: "Credentialing",
-		icon: <PiIdentificationBadge />,
-		image: "https://images.pexels.com/photos/6457521/pexels-photo-6457521.jpeg",
-		desc: "Ensure your providers are properly credentialed with our comprehensive credentialing services, maintaining compliance and reducing administrative burdens.",
-		body: `
+  {
+    id: 3,
+    title: "Credentialing",
+    icon: <PiIdentificationBadge />,
+    image: "https://images.pexels.com/photos/6457521/pexels-photo-6457521.jpeg",
+    desc: "Ensure your providers are properly credentialed with our comprehensive credentialing services, maintaining compliance and reducing administrative burdens.",
+    body: `
       <p>Our credentialing services ensure that your healthcare providers are properly credentialed and compliant with all necessary regulations. We manage the entire credentialing process, from initial application to ongoing maintenance, reducing administrative burdens and ensuring timely renewals.</p>
       <p>Our comprehensive credentialing services include:</p>
       <ul>
@@ -731,15 +736,15 @@ export const services = [
       <p>Our credentialing services help you maintain compliance, reduce administrative burdens, and ensure that your providers are properly credentialed and ready to serve patients. Trust our team to manage your credentialing needs with precision and expertise.</p>
       <img src="https://images.pexels.com/photos/8297478/pexels-photo-8297478.jpeg" alt="Credentialing">
     `,
-		tags: ["Credentialing", "Compliance", "Healthcare"],
-	},
-	{
-		id: 4,
-		title: "Prior Authorization",
-		icon: <PiSealCheck />,
-		image: "https://images.pexels.com/photos/5699456/pexels-photo-5699456.jpeg",
-		desc: "Streamline your prior authorization process with our comprehensive services, ensuring timely approvals and reducing delays in patient care.",
-		body: `
+    tags: ["Credentialing", "Compliance", "Healthcare"],
+  },
+  {
+    id: 4,
+    title: "Prior Authorization",
+    icon: <PiSealCheck />,
+    image: "https://images.pexels.com/photos/5699456/pexels-photo-5699456.jpeg",
+    desc: "Streamline your prior authorization process with our comprehensive services, ensuring timely approvals and reducing delays in patient care.",
+    body: `
       <p>Our prior authorization services streamline the process of obtaining approvals for necessary medical procedures and treatments. We manage the entire authorization process, from request submission to follow-up, ensuring timely approvals and reducing delays in patient care.</p>
       <p>Our comprehensive prior authorization services include:</p>
       <ul>
@@ -757,15 +762,15 @@ export const services = [
       <p>Our prior authorization services help you streamline operations, reduce delays in patient care, and ensure timely approvals for necessary medical procedures and treatments. Trust our team to manage your prior authorization needs with precision and expertise.</p>
       <img src="https://images.pexels.com/photos/6129118/pexels-photo-6129118.jpeg?auto=compress&cs=tinysrg" alt="Prior Authorization">
     `,
-		tags: ["Prior Authorization", "Insurance", "Healthcare"],
-	},
-	{
-		id: 5,
-		title: "Virtual Assistant",
-		icon: <PiHeadset />,
-		image: "https://images.pexels.com/photos/3747409/pexels-photo-3747409.jpeg",
-		desc: "Enhance your practice’s efficiency with our virtual assistant services, providing comprehensive support for administrative tasks and patient communication.",
-		body: `
+    tags: ["Prior Authorization", "Insurance", "Healthcare"],
+  },
+  {
+    id: 5,
+    title: "Virtual Assistant",
+    icon: <PiHeadset />,
+    image: "https://images.pexels.com/photos/3747409/pexels-photo-3747409.jpeg",
+    desc: "Enhance your practice’s efficiency with our virtual assistant services, providing comprehensive support for administrative tasks and patient communication.",
+    body: `
       <p>Enhance your practice’s efficiency with our virtual assistant services. Our experienced virtual assistants can manage a variety of tasks, allowing your staff to focus on patient care. Our virtual assistants are trained to handle administrative duties, patient communication, and other essential tasks, providing you with the support you need to run your practice smoothly.</p>
       <p>Our comprehensive virtual assistant services include:</p>
       <ul>
@@ -783,15 +788,15 @@ export const services = [
       <p>Our virtual assistant services provide flexibility and support, allowing you to focus on patient care while we handle the day-to-day operations. Experience the benefits of having a dedicated assistant without the need for physical office space.</p>
       <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" alt="Virtual Assistant">
     `,
-		tags: ["Virtual Assistant", "Administrative Support", "Healthcare"],
-	},
-	{
-		id: 6,
-		title: "Revenue Cycle Management",
-		icon: <PiArrowsClockwise />,
-		image: "https://images.pexels.com/photos/7947656/pexels-photo-7947656.jpeg",
-		desc: "Maximize your practice’s revenue and efficiency with our comprehensive revenue cycle management services, from patient registration to final payment.",
-		body: `
+    tags: ["Virtual Assistant", "Administrative Support", "Healthcare"],
+  },
+  {
+    id: 6,
+    title: "Revenue Cycle Management",
+    icon: <PiArrowsClockwise />,
+    image: "https://images.pexels.com/photos/7947656/pexels-photo-7947656.jpeg",
+    desc: "Maximize your practice’s revenue and efficiency with our comprehensive revenue cycle management services, from patient registration to final payment.",
+    body: `
       <p>Our revenue cycle management services are designed to maximize your practice’s revenue and efficiency. We manage the entire revenue cycle, from patient registration to final payment, ensuring that all processes are optimized and that you receive timely reimbursements.</p>
       <p>Our comprehensive revenue cycle management services include:</p>
       <ul>
@@ -811,15 +816,15 @@ export const services = [
       <p>Our revenue cycle management services help you optimize your practice’s financial performance, reduce administrative burdens, and ensure timely reimbursements. Trust our team to manage your revenue cycle with expertise and precision.</p>
       <img src="https://images.pexels.com/photos/7947837/pexels-photo-7947837.jpeg?auto=compress&cs=tinysrg" alt="Revenue Cycle Management">
     `,
-		tags: ["Revenue Cycle Management", "Billing", "Healthcare"],
-	},
-	{
-		id: 7,
-		title: "Denial Management",
-		icon: <PiArrowUDownLeft />,
-		image: "https://images.pexels.com/photos/4476630/pexels-photo-4476630.jpeg",
-		desc: "Reduce denials and improve revenue with our comprehensive denial management services, ensuring timely resolution and payment.",
-		body: `
+    tags: ["Revenue Cycle Management", "Billing", "Healthcare"],
+  },
+  {
+    id: 7,
+    title: "Denial Management",
+    icon: <PiArrowUDownLeft />,
+    image: "https://images.pexels.com/photos/4476630/pexels-photo-4476630.jpeg",
+    desc: "Reduce denials and improve revenue with our comprehensive denial management services, ensuring timely resolution and payment.",
+    body: `
       <p>Our denial management services help you reduce denials, improve revenue, and maintain a healthy cash flow. We manage the entire denial management process, from analyzing denied claims to submitting appeals, ensuring timely resolution and payment.</p>
       <p>Our comprehensive denial management services include:</p>
       <ul>
@@ -834,57 +839,65 @@ export const services = [
       <p>Our denial management services help you reduce denials, improve revenue, and maintain a healthy cash flow. With our expertise and attention to detail, you can trust that your denials will be managed efficiently and effectively.</p>
       <img src="https://images.pexels.com/photos/4476630/pexels-photo-4476630.jpeg" alt="Denial Management">
     `,
-		tags: ["Denial Management", "Appeals", "Healthcare"],
-	},
+    tags: ["Denial Management", "Appeals", "Healthcare"],
+  },
 ];
 
 export const specialityCategories = [
-	"Primary & urgent care",
-	"Medical specialties",
-	"Surgical",
-	"Imaging & oncology",
-	"Behavioral health",
-	"Therapy & rehabilitation",
-	"Facilities",
-	"Dental, PI & workers' comp",
+  "Primary & urgent care",
+  "Medical specialties",
+  "Surgical",
+  "Imaging & oncology",
+  "Behavioral health",
+  "Therapy & rehabilitation",
+  "Facilities",
+  "Dental, PI & workers' comp",
 ];
 
 export const specialities = [
-	{ id: 1, title: "Cardiology", category: "Medical specialties" },
-	{ id: 2, title: "Dermatology", category: "Medical specialties" },
-	{ id: 3, title: "Gastroenterology", category: "Medical specialties" },
-	{ id: 4, title: "Nephrology", category: "Medical specialties" },
-	{ id: 5, title: "Neurology", category: "Medical specialties" },
-	{ id: 6, title: "Orthopedic", category: "Surgical" },
-	{ id: 7, title: "Psychiatry", category: "Behavioral health" },
-	{ id: 8, title: "Podiatry", category: "Surgical" },
-	{ id: 9, title: "Radiation Oncology", category: "Imaging & oncology" },
-	{ id: 10, title: "Radiology", category: "Imaging & oncology" },
-	{ id: 11, title: "Urology", category: "Medical specialties" },
-	{ id: 12, title: "Allergy & Immunology", category: "Medical specialties" },
-	{ id: 13, title: "ASC - Surgery Center", category: "Facilities" },
-	{ id: 14, title: "Plastic Surgery", category: "Surgical" },
-	{ id: 15, title: "Chiropractic", category: "Therapy & rehabilitation" },
-	{ id: 16, title: "Family Practice", category: "Primary & urgent care" },
-	{ id: 17, title: "Rural Health", category: "Facilities" },
-	{ id: 18, title: "Hospital", category: "Facilities" },
-	{ id: 19, title: "Internal Medicine", category: "Primary & urgent care" },
-	{ id: 20, title: "Ob/Gyn", category: "Medical specialties" },
-	{ id: 21, title: "Multi-Specialty", category: "Facilities" },
-	{ id: 22, title: "Occupational Therapy", category: "Therapy & rehabilitation" },
-	{ id: 23, title: "Ophthalmology", category: "Medical specialties" },
-	{ id: 24, title: "Pain Management", category: "Medical specialties" },
-	{ id: 25, title: "Pediatric", category: "Primary & urgent care" },
-	{ id: 26, title: "Personal Injury", category: "Dental, PI & workers' comp" },
-	{ id: 27, title: "Surgery", category: "Surgical" },
-	{ id: 28, title: "Physical Therapy", category: "Therapy & rehabilitation" },
-	{ id: 29, title: "Mental Health", category: "Behavioral health" },
-	{ id: 30, title: "Physician", category: "Primary & urgent care" },
-	{ id: 31, title: "Physical Medicine", category: "Therapy & rehabilitation" },
-	{ id: 32, title: "Rheumatology", category: "Medical specialties" },
-	{ id: 33, title: "Sleep Medicine", category: "Medical specialties" },
-	{ id: 34, title: "Speech Pathology", category: "Therapy & rehabilitation" },
-	{ id: 35, title: "Urgent Care", category: "Primary & urgent care" },
-	{ id: 36, title: "Workers' Compensation", category: "Dental, PI & workers' comp" },
-	{ id: 37, title: "Dental Billing", category: "Dental, PI & workers' comp" },
+  { id: 1, title: "Cardiology", category: "Medical specialties" },
+  { id: 2, title: "Dermatology", category: "Medical specialties" },
+  { id: 3, title: "Gastroenterology", category: "Medical specialties" },
+  { id: 4, title: "Nephrology", category: "Medical specialties" },
+  { id: 5, title: "Neurology", category: "Medical specialties" },
+  { id: 6, title: "Orthopedic", category: "Surgical" },
+  { id: 7, title: "Psychiatry", category: "Behavioral health" },
+  { id: 8, title: "Podiatry", category: "Surgical" },
+  { id: 9, title: "Radiation Oncology", category: "Imaging & oncology" },
+  { id: 10, title: "Radiology", category: "Imaging & oncology" },
+  { id: 11, title: "Urology", category: "Medical specialties" },
+  { id: 12, title: "Allergy & Immunology", category: "Medical specialties" },
+  { id: 13, title: "ASC - Surgery Center", category: "Facilities" },
+  { id: 14, title: "Plastic Surgery", category: "Surgical" },
+  { id: 15, title: "Chiropractic", category: "Therapy & rehabilitation" },
+  { id: 16, title: "Family Practice", category: "Primary & urgent care" },
+  { id: 17, title: "Rural Health", category: "Facilities" },
+  { id: 18, title: "Hospital", category: "Facilities" },
+  { id: 19, title: "Internal Medicine", category: "Primary & urgent care" },
+  { id: 20, title: "Ob/Gyn", category: "Medical specialties" },
+  { id: 21, title: "Multi-Specialty", category: "Facilities" },
+  {
+    id: 22,
+    title: "Occupational Therapy",
+    category: "Therapy & rehabilitation",
+  },
+  { id: 23, title: "Ophthalmology", category: "Medical specialties" },
+  { id: 24, title: "Pain Management", category: "Medical specialties" },
+  { id: 25, title: "Pediatric", category: "Primary & urgent care" },
+  { id: 26, title: "Personal Injury", category: "Dental, PI & workers' comp" },
+  { id: 27, title: "Surgery", category: "Surgical" },
+  { id: 28, title: "Physical Therapy", category: "Therapy & rehabilitation" },
+  { id: 29, title: "Mental Health", category: "Behavioral health" },
+  { id: 30, title: "Physician", category: "Primary & urgent care" },
+  { id: 31, title: "Physical Medicine", category: "Therapy & rehabilitation" },
+  { id: 32, title: "Rheumatology", category: "Medical specialties" },
+  { id: 33, title: "Sleep Medicine", category: "Medical specialties" },
+  { id: 34, title: "Speech Pathology", category: "Therapy & rehabilitation" },
+  { id: 35, title: "Urgent Care", category: "Primary & urgent care" },
+  {
+    id: 36,
+    title: "Workers' Compensation",
+    category: "Dental, PI & workers' comp",
+  },
+  { id: 37, title: "Dental Billing", category: "Dental, PI & workers' comp" },
 ];

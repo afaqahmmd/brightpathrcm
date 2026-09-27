@@ -1,7 +1,7 @@
 .site-footer {
   @include on-navy;
   background: var(--navy-950);
-  padding-top: clamp(64px, 8vw, 104px);
+  padding-top: clamp(32px, 6vw, 60px);
   overflow: hidden;
 
   &__top {
@@ -81,24 +81,6 @@
     grid-auto-flow: column;
     justify-content: start;
     gap: 16px !important;
-  }
-
-  &__wordmark {
-    margin-top: clamp(56px, 8vw, 96px);
-    font-family: var(--font-display);
-    font-weight: 800;
-    font-size: clamp(2.6rem, 10.5vw, 9rem);
-    line-height: 1;
-    padding-bottom: 0.12em;
-    letter-spacing: -0.05em;
-    color: transparent;
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.14);
-    white-space: nowrap;
-    user-select: none;
-
-    span {
-      -webkit-text-stroke: 1px rgba(242, 107, 29, 0.45);
-    }
   }
 
   &__bottom {

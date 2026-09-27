@@ -89,10 +89,6 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="site-footer__wordmark" aria-hidden="true">
-          BrightPath<span>RCM</span>
-        </div>
-
         <div className="site-footer__bottom">
           <small>
             &copy; {year} {siteConfig.legalName}. All rights reserved.

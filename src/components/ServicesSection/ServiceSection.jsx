@@ -3,7 +3,7 @@ import { PiArrowRight, PiArrowUpRight } from "react-icons/pi";
 import ServiceCard from "../ServiceCard/ServiceCard";
 import { services } from "@/lib/DataStore";
 
-const FEATURED_ID = 6; // Revenue Cycle Management anchors the ecosystem
+const FEATURED_ID = 1; // Medical Billing anchors the ecosystem
 
 const ServiceSection = ({ number = "02" }) => {
   const featured = services.find((s) => s.id === FEATURED_ID);

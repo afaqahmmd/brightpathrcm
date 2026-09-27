@@ -9,7 +9,7 @@ const NavLink = ({ link, onClick, className = "nav-link", children }) => {
 
   return (
     <Link
-      href={link.path}
+      href={link.href || link.path}
       className={className + (isActive ? " active" : "")}
       aria-current={isActive ? "page" : undefined}
       onClick={onClick}

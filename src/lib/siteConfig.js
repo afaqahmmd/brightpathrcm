@@ -29,8 +29,11 @@ export const siteConfig = {
 };
 
 export const navLinks = [
+  { id: "home", name: "Home", path: "/" },
   { id: "services", name: "Services", path: "/services" },
   { id: "specialities", name: "Specialties", path: "/specialities" },
   { id: "about", name: "About", path: "/about" },
   { id: "blog", name: "Insights", path: "/blog" },
+  // href jumps straight to the form; path is still used for the active state
+  { id: "contact", name: "Contact", path: "/contact", href: "/contact#request" },
 ];

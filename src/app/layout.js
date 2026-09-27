@@ -4,6 +4,8 @@ import { Analytics } from "@vercel/analytics/react";
 import { Plus_Jakarta_Sans, Manrope, IBM_Plex_Mono } from "next/font/google";
 import "./styles.scss";
 import Navbar from "@/components/Navbar/Navbar";
+import TopBar from "@/components/TopBar/TopBar";
+import RouteProgress from "@/components/RouteProgress/RouteProgress";
 import Footer from "@/components/Footer/Footer";
 import { siteConfig } from "@/lib/siteConfig";
 
@@ -59,9 +61,11 @@ export default function RootLayout({ children }) {
         <script dangerouslySetInnerHTML={{ __html: jsInit }} />
       </head>
       <body>
+        <RouteProgress />
         <a href="#main" className="skip-link">
           Skip to content
         </a>
+        <TopBar />
         <Navbar />
         <main id="main">{children}</main>
         <Footer />

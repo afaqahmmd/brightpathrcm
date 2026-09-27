@@ -1,0 +1,59 @@
+.top-bar {
+  @include on-navy;
+  font-size: 0.82rem;
+  position: relative;
+  z-index: 101; // above the sticky header's shadow
+
+  &__inner {
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+    @include up($bp-md) {
+      justify-content: space-between;
+    }
+  }
+
+  &__group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-width: 0;
+  }
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    min-width: 0;
+    padding-block: 8px;
+    color: var(--on-navy-muted);
+    white-space: nowrap;
+    transition: color 0.2s;
+
+    svg {
+      flex: none;
+      font-size: 1.05em;
+      color: var(--accent-text);
+    }
+
+    &:hover {
+      color: var(--on-navy);
+    }
+
+    &:focus-visible {
+      @include focus-ring;
+    }
+  }
+
+  // Address is the longest item; drop it on narrow screens (the mobile menu and footer still show it)
+  &__address {
+    display: none;
+
+    @include up($bp-md) {
+      display: inline-flex;
+    }
+  }
+}

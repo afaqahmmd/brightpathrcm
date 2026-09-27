@@ -32,12 +32,10 @@
     align-content: end;
     justify-items: start;
 
-    @include up($bp-sm) {
-      grid-column: 1 / -1;
-    }
-
+    // Spans sized to close the grid with 6 services (featured + 5 cards);
+    // revisit if the number of services changes.
     @include up($bp-lg) {
-      grid-column: span 2;
+      grid-column: span 3;
     }
   }
 }

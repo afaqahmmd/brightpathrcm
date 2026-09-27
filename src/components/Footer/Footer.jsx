@@ -41,12 +41,9 @@ const Footer = () => {
                 .filter((link) => link.id !== "services")
                 .map((link) => (
                   <li key={link.id}>
-                    <Link href={link.path}>{link.name}</Link>
+                    <Link href={link.href || link.path}>{link.name}</Link>
                   </li>
                 ))}
-              <li>
-                <Link href="/contact">Contact</Link>
-              </li>
             </ul>
           </nav>
 

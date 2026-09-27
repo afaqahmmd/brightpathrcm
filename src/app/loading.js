@@ -1,8 +1,8 @@
 const Loading = () => {
   return (
-    <div className="loading-state" role="status">
-      <span className="loading-state__bar" aria-hidden="true" />
-      <span className="sr-only">Loading…</span>
+    <div className="page-loading" role="status">
+      <span className="spinner" aria-hidden="true" />
+      <span className="page-loading__label mono">Loading…</span>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { PiArrowRight, PiList, PiX } from "react-icons/pi";
@@ -10,6 +10,8 @@ import { navLinks, siteConfig } from "@/lib/siteConfig";
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [menuTop, setMenuTop] = useState(null);
+  const headerRef = useRef(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -26,6 +28,8 @@ const Navbar = () => {
 
   useEffect(() => {
     if (!isOpen) return;
+    // The top bar above the header scrolls away, so the menu starts wherever the header's bottom edge is now
+    setMenuTop(headerRef.current?.getBoundingClientRect().bottom ?? null);
     const onKey = (e) => e.key === "Escape" && setOpen(false);
     document.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
@@ -36,7 +40,10 @@ const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <header className={"site-header" + (scrolled ? " is-scrolled" : "") + (isOpen ? " menu-open" : "")}>
+    <header
+      ref={headerRef}
+      className={"site-header" + (scrolled ? " is-scrolled" : "") + (isOpen ? " menu-open" : "")}
+    >
       <div className="container site-header__inner">
         <Link href="/" className="site-header__brand" aria-label={`${siteConfig.name} home`}>
           <Logo />
@@ -65,11 +72,16 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div id="mobile-menu" className="mobile-menu" hidden={!isOpen}>
+      <div
+        id="mobile-menu"
+        className="mobile-menu"
+        hidden={!isOpen}
+        style={menuTop != null ? { top: menuTop } : undefined}
+      >
         <div className="container mobile-menu__inner">
           <nav aria-label="Mobile">
             <ol className="mobile-menu__links">
-              {[...navLinks, { id: "contact", name: "Contact", path: "/contact" }].map((link, i) => (
+              {navLinks.map((link, i) => (
                 <li key={link.id}>
                   <NavLink link={link} className="mobile-menu__link">
                     <span className="mono">{String(i + 1).padStart(2, "0")}</span>

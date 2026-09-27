@@ -1,11 +1,10 @@
 import {
-  PiStethoscope,
-  PiTooth,
+  PiReceipt,
+  PiFileCode,
   PiIdentificationBadge,
-  PiSealCheck,
   PiHeadset,
-  PiArrowsClockwise,
-  PiArrowUDownLeft,
+  PiMicrophone,
+  PiStack,
 } from "react-icons/pi";
 
 // All site copy below is written for BrightPathRCM.
@@ -48,14 +47,14 @@ export const revenueLeaks = [
     problem: "Codes don't fully reflect the care delivered",
     detail:
       "Under-coding leaves money behind; over-coding invites audits and take-backs.",
-    serviceId: 1,
+    serviceId: 2,
   },
   {
     id: 3,
     problem: "Denials are written off instead of worked",
     detail:
       "Without root-cause analysis and appeals, the same denials keep coming back.",
-    serviceId: 7,
+    serviceId: 6,
   },
   {
     id: 4,
@@ -67,7 +66,7 @@ export const revenueLeaks = [
     id: 5,
     problem: "A/R ages without follow-up",
     detail: "Unpaid claims get harder to collect with every week they sit.",
-    serviceId: 6,
+    serviceId: 1,
   },
 ];
 
@@ -103,7 +102,7 @@ export const qaArray = [
     id: 1,
     question: "What services does BrightPathRCM offer?",
     answer:
-      "We cover the revenue cycle end to end: medical and dental billing, coding, credentialing, prior authorization, denial management, accounts receivable follow-up and virtual administrative support.",
+      "We cover the revenue cycle end to end: medical billing, medical coding, credentialing, front office management (eligibility checks, prior authorizations and scheduling), medical transcription, and value-added services such as denial analysis, old A/R recovery and performance reporting.",
   },
   {
     id: 2,
@@ -119,9 +118,9 @@ export const qaArray = [
   },
   {
     id: 4,
-    question: "How does the virtual assistant service work?",
+    question: "What does front office management include?",
     answer:
-      "Remote team members handle administrative tasks such as scheduling, patient communication and documentation support, so your in-office staff can focus on patients.",
+      "We handle patient registration, insurance eligibility checks, prior authorizations, scheduling and regular reminder and follow-up calls, so claims start clean and fewer patients miss appointments.",
   },
   {
     id: 5,
@@ -664,182 +663,136 @@ export const blogs = [
 export const services = [
   {
     id: 1,
-    title: "Medical Billing & Coding",
-    icon: <PiStethoscope />,
+    title: "Medical Billing Services",
+    icon: <PiReceipt />,
     image: "https://images.pexels.com/photos/4974914/pexels-photo-4974914.jpeg",
-    desc: "Streamline your medical billing, dental billing and coding processes with our professional services, ensuring accuracy and enhancing financial success.",
+    desc: "Professional medical billing and management for small and medium-sized practices, with careful preparation of every claim so you can count on getting paid.",
     body: `
-      <p>Medical billing and coding can be a complex and time-consuming task, but with our professional services, you can streamline the process and enhance the financial success of your practice. Our team of experts ensures that all billing and coding is done accurately and efficiently, reducing errors and maximizing reimbursements.</p>
-      <p>Our comprehensive medical billing, dental billing and coding services include:</p>
+      <p>BrightPathRCM provides professional medical billing and management services to small and medium-sized practices. We prepare every bill and payment claim with care, submit it cleanly and follow it through to payment, so your revenue is something you can count on.</p>
+      <p>Our medical billing services include:</p>
       <ul>
-        <li>Medical Coding: Accurate coding of diagnoses and procedures to ensure proper reimbursement and compliance with regulations.</li>
-        <li>Charge Entry: Efficient and accurate entry of charges to ensure timely billing and payment.</li>
-        <li>Claim Submission: Submission of claims to insurance companies on a daily basis to ensure timely reimbursement.</li>
-        <li>Payment Posting: Accurate posting of payments and adjustments to maintain up-to-date account balances.</li>
-        <li>Account Receivable Management: Follow-up on unpaid claims to ensure timely payment and reduce outstanding balances.</li>
-        <li>Denial Management: Analysis and resolution of denied claims to maximize reimbursement and prevent future denials.</li>
-        <li>Appeals Submission: Submission of appeals for denied claims with necessary documentation and follow-up until resolution.</li>
-        <li>Detailed Reporting: Comprehensive reports and analytics to provide insights into billing performance and identify areas for improvement.</li>
-        <li>Compliance: Ensuring all billing and coding practices are compliant with current regulations and standards.</li>
+        <li><strong>Charge Entry:</strong> Accurate, timely entry of charges from your encounters and superbills.</li>
+        <li><strong>Claim Scrubbing and Submission:</strong> Claims are checked against payer rules before they go out, then submitted electronically without delay.</li>
+        <li><strong>Payment Posting:</strong> ERA and EOB payments and adjustments posted promptly, so account balances stay current.</li>
+        <li><strong>Accounts Receivable Follow-Up:</strong> Unpaid and underpaid claims are worked with payers until they are resolved.</li>
+        <li><strong>Denial Management and Appeals:</strong> Denials are corrected, resubmitted or appealed with the right documentation.</li>
+        <li><strong>Patient Statements:</strong> Clear statements and help for patients with questions about their balance.</li>
+        <li><strong>Reporting:</strong> Regular reports on what was billed, collected, denied and outstanding.</li>
       </ul>
-      <p>Our medical billing, dental billing and coding services help you reduce administrative burdens, increase revenue, and maintain compliance with industry standards. Trust our team to manage your billing and coding needs with precision and expertise.</p>
-      <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg" alt="Medical Billing & Coding">
+      <p>With billing handled by one accountable team, your staff spend less time chasing payers and more time with patients.</p>
+      <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg" alt="Medical billing team reviewing claims">
     `,
-    tags: ["Medical Billing", "Coding", "Healthcare"],
+    tags: ["Medical Billing", "Claims", "A/R"],
   },
   {
     id: 2,
-    title: "Dental Billing",
-    icon: <PiTooth />,
-    image: "https://images.pexels.com/photos/305566/pexels-photo-305566.jpeg",
-    desc: "Optimize your dental billing processes with our expert services, ensuring accuracy and enhancing the financial health of your practice.",
+    title: "Medical Coding Services",
+    icon: <PiFileCode />,
+    image: "https://images.pexels.com/photos/7947656/pexels-photo-7947656.jpeg",
+    desc: "Coding is the foundation of the whole billing process. Our coders translate your documentation accurately so your practice gets the best outcome from every claim.",
     body: `
-    <p>Dental billing can be intricate and demanding, but our specialized services make the process seamless and efficient. Our team of professionals is dedicated to ensuring that all aspects of dental billing are handled with precision, minimizing errors and maximizing reimbursements.</p>
-    <p>Our comprehensive dental billing services include:</p>
-    <ul>
-      <li><strong>Dental Coding:</strong> Accurate coding of dental procedures and diagnoses to ensure proper reimbursement and adherence to regulations.</li>
-      <li><strong>Charge Entry:</strong> Efficient and precise entry of dental charges to facilitate timely billing and payment.</li>
-      <li><strong>Claim Submission:</strong> Daily submission of claims to insurance companies to ensure prompt reimbursement.</li>
-      <li><strong>Payment Posting:</strong> Accurate posting of payments and adjustments to maintain current account balances.</li>
-      <li><strong>Account Receivable Management:</strong> Follow-up on unpaid claims to ensure timely payment and reduce outstanding balances.</li>
-      <li><strong>Denial Management:</strong> Analysis and resolution of denied claims to maximize reimbursements and prevent future denials.</li>
-      <li><strong>Appeals Submission:</strong> Submission of appeals for denied claims with necessary documentation and diligent follow-up.</li>
-      <li><strong>Detailed Reporting:</strong> Comprehensive reports and analytics to provide insights into billing performance and identify areas for improvement.</li>
-      <li><strong>Compliance:</strong> Ensuring all billing and coding practices comply with current dental industry regulations and standards.</li>
-    </ul>
-    <p>Our dental billing services are designed to reduce administrative burdens, enhance revenue, and maintain compliance with industry standards. Rely on our expert team to manage your dental billing needs with accuracy and professionalism.</p>
-    <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg" alt="Dental Billing & Coding">
-  `,
-    tags: ["Dental Billing", "Coding", "Healthcare"],
+      <p>Professional billing starts with accurate coding. Every claim depends on diagnoses and procedures being translated correctly from the clinical record, and small coding errors lead to denials, underpayments or audit risk. BrightPathRCM's coding team makes coding the foundation of the billing process, so your practice receives the best outcome for the care it delivers.</p>
+      <p>Our medical coding services include:</p>
+      <ul>
+        <li><strong>ICD-10, CPT and HCPCS Coding:</strong> Accurate code assignment for diagnoses, procedures, services and supplies.</li>
+        <li><strong>Modifier Review:</strong> Correct use of modifiers so payers pay for the full service provided.</li>
+        <li><strong>Documentation Review:</strong> Checking that notes support the codes billed, with feedback where documentation falls short.</li>
+        <li><strong>Specialty Coding:</strong> Coding that reflects the rules and payer requirements of your specialty.</li>
+        <li><strong>Coding Audits:</strong> Reviews that catch under-coding and over-coding before they cost you revenue or invite scrutiny.</li>
+        <li><strong>Code Updates:</strong> Keeping your coding current as annual code sets and payer policies change.</li>
+      </ul>
+      <p>Accurate coding means cleaner claims, fewer denials and reimbursement that reflects the care you actually provide.</p>
+      <img src="https://images.pexels.com/photos/7947837/pexels-photo-7947837.jpeg?auto=compress&cs=tinysrgb" alt="Medical coder working through patient documentation">
+    `,
+    tags: ["Medical Coding", "ICD-10", "CPT"],
   },
-
   {
     id: 3,
-    title: "Credentialing",
+    title: "Medical Credentialing Services",
     icon: <PiIdentificationBadge />,
     image: "https://images.pexels.com/photos/6457521/pexels-photo-6457521.jpeg",
-    desc: "Ensure your providers are properly credentialed with our comprehensive credentialing services, maintaining compliance and reducing administrative burdens.",
+    desc: "Physician credentialing can become a hassle. Our credentialing and re-credentialing services help you avoid delays and prevent loss of revenue.",
     body: `
-      <p>Our credentialing services ensure that your healthcare providers are properly credentialed and compliant with all necessary regulations. We manage the entire credentialing process, from initial application to ongoing maintenance, reducing administrative burdens and ensuring timely renewals.</p>
-      <p>Our comprehensive credentialing services include:</p>
+      <p>In most healthcare settings, physician credentialing becomes a hassle: long applications, missing documents, slow payer responses and renewal dates that are easy to miss. Our credentialing and re-credentialing services take that work off your plate, helping you avoid enrollment delays and the lost revenue that comes with them.</p>
+      <p>Our medical credentialing services include:</p>
       <ul>
-        <li>Provider Enrollment: Assistance with enrolling providers with various insurance carriers and healthcare networks.</li>
-        <li>Contract Management: Review and management of contracts with insurance carriers to ensure favorable terms and conditions for providers.</li>
-        <li>Document Management: Organizing and maintaining necessary documents for credentialing, including licenses, certifications, malpractice insurance, and other required documents.</li>
-        <li>Application Preparation: Preparation and submission of credentialing applications to ensure accuracy and completeness.</li>
-        <li>Verification: Verification of the provider’s credentials, including education, training, licensure, and board certifications.</li>
-        <li>Re-Credentialing: Management of re-credentialing processes to maintain active status with insurance carriers and healthcare networks.</li>
-        <li>Compliance: Ensuring compliance with all state, federal, and payer-specific credentialing requirements.</li>
-        <li>Expiration Management: Monitoring and managing the expiration dates of critical documents such as licenses, certifications, and insurance policies to ensure timely renewals.</li>
-        <li>Audit Assistance: Assistance with internal and external audits of credentialing files to ensure compliance with regulatory standards.</li>
+        <li><strong>Payer Enrollment:</strong> Enrolling providers with commercial payers, Medicare and Medicaid.</li>
+        <li><strong>Application Preparation:</strong> Completing and submitting applications accurately the first time.</li>
+        <li><strong>CAQH Profile Management:</strong> Setting up, updating and attesting provider profiles.</li>
+        <li><strong>Document Management:</strong> Keeping licenses, DEA registrations, malpractice insurance and other records organized and current.</li>
+        <li><strong>Application Follow-Up:</strong> Regular follow-up with payers until each enrollment is approved.</li>
+        <li><strong>Re-Credentialing:</strong> Tracking renewal and expiration dates so providers stay active with every payer.</li>
       </ul>
-      <p>Our credentialing services help you maintain compliance, reduce administrative burdens, and ensure that your providers are properly credentialed and ready to serve patients. Trust our team to manage your credentialing needs with precision and expertise.</p>
-      <img src="https://images.pexels.com/photos/8297478/pexels-photo-8297478.jpeg" alt="Credentialing">
+      <p>Properly credentialed providers can see patients and bill without interruption, protecting both access to care and your revenue.</p>
+      <img src="https://images.pexels.com/photos/8297478/pexels-photo-8297478.jpeg" alt="Provider credentialing paperwork">
     `,
-    tags: ["Credentialing", "Compliance", "Healthcare"],
+    tags: ["Credentialing", "Enrollment", "CAQH"],
   },
   {
     id: 4,
-    title: "Prior Authorization",
-    icon: <PiSealCheck />,
-    image: "https://images.pexels.com/photos/5699456/pexels-photo-5699456.jpeg",
-    desc: "Streamline your prior authorization process with our comprehensive services, ensuring timely approvals and reducing delays in patient care.",
+    title: "Front Office Management",
+    icon: <PiHeadset />,
+    image: "https://images.pexels.com/photos/3747409/pexels-photo-3747409.jpeg",
+    desc: "Accurate data collection at the front desk, patient insurance eligibility checks and regular follow-ups that reduce patient no-shows.",
     body: `
-      <p>Our prior authorization services streamline the process of obtaining approvals for necessary medical procedures and treatments. We manage the entire authorization process, from request submission to follow-up, ensuring timely approvals and reducing delays in patient care.</p>
-      <p>Our comprehensive prior authorization services include:</p>
+      <p>Clean claims start at the front desk. Our front office management services make sure patient information is collected accurately, insurance eligibility is verified before the visit and patients are reminded and followed up with, so fewer appointments turn into no-shows.</p>
+      <p>Our front office management services include:</p>
       <ul>
-        <li>Authorization Request Submission: Preparing and submitting prior authorization requests to insurance companies.</li>
-        <li>Documentation Gathering: Collecting and organizing necessary medical documentation to support authorization requests.</li>
-        <li>Insurance Follow-Up: Continuously following up with insurance companies to ensure timely processing of prior authorization requests.</li>
-        <li>Status Tracking: Monitoring the status of authorization requests and providing regular updates to healthcare providers.</li>
-        <li>Denial Management: Handling denied authorization requests by investigating reasons for denial and submitting appeals as needed.</li>
-        <li>Patient Communication: Informing patients about the status of their authorization requests and any necessary steps they need to take.</li>
-        <li>Compliance Assurance: Ensuring that all prior authorization requests comply with insurance policies and regulatory requirements.</li>
-        <li>Streamlined Processes: Implementing efficient workflows to expedite the authorization process and reduce delays in patient care.</li>
-        <li>Reporting and Analytics: Providing detailed reports and analytics on prior authorization activities to help practices identify trends and areas for improvement.</li>
-        <li>Support for Various Specialties: Offering prior authorization services tailored to the unique requirements of different medical specialties.</li>
+        <li><strong>Patient Registration:</strong> Accurate capture of demographics and insurance details.</li>
+        <li><strong>Eligibility and Benefits Verification:</strong> Confirming coverage, copays and deductibles before the patient is seen.</li>
+        <li><strong>Prior Authorizations:</strong> Requesting and tracking authorizations for services that need them.</li>
+        <li><strong>Appointment Scheduling:</strong> Booking, rescheduling and managing cancellations.</li>
+        <li><strong>Reminders and Follow-Ups:</strong> Regular patient reminders and follow-up calls to reduce no-shows.</li>
+        <li><strong>Patient Communication:</strong> Answering patient calls and questions about appointments and coverage.</li>
       </ul>
-      <p>Our prior authorization services help you streamline operations, reduce delays in patient care, and ensure timely approvals for necessary medical procedures and treatments. Trust our team to manage your prior authorization needs with precision and expertise.</p>
-      <img src="https://images.pexels.com/photos/6129118/pexels-photo-6129118.jpeg?auto=compress&cs=tinysrg" alt="Prior Authorization">
+      <p>When the front end is right, fewer claims are denied and your schedule stays full.</p>
+      <img src="https://images.pexels.com/photos/6129118/pexels-photo-6129118.jpeg?auto=compress&cs=tinysrgb" alt="Front desk staff assisting a patient">
     `,
-    tags: ["Prior Authorization", "Insurance", "Healthcare"],
+    tags: ["Front Office", "Eligibility", "Scheduling"],
   },
   {
     id: 5,
-    title: "Virtual Assistant",
-    icon: <PiHeadset />,
-    image: "https://images.pexels.com/photos/3747409/pexels-photo-3747409.jpeg",
-    desc: "Enhance your practice’s efficiency with our virtual assistant services, providing comprehensive support for administrative tasks and patient communication.",
+    title: "Medical Transcription Services",
+    icon: <PiMicrophone />,
+    image: "https://images.pexels.com/photos/5699456/pexels-photo-5699456.jpeg",
+    desc: "A qualified medical transcription team using modern tools to turn your dictation into accurate, timely clinical documentation.",
     body: `
-      <p>Enhance your practice’s efficiency with our virtual assistant services. Our experienced virtual assistants can manage a variety of tasks, allowing your staff to focus on patient care. Our virtual assistants are trained to handle administrative duties, patient communication, and other essential tasks, providing you with the support you need to run your practice smoothly.</p>
-      <p>Our comprehensive virtual assistant services include:</p>
+      <p>Clinical documentation drives both patient care and billing. BrightPathRCM's medical transcription team uses modern tools to turn provider dictation into accurate, well-formatted records, delivered on a turnaround that keeps your charts and your claims moving.</p>
+      <p>Our medical transcription services include:</p>
       <ul>
-        <li>Appointment Scheduling: Our virtual assistants manage patient appointments, coordinate with medical staff, and handle cancellations or rescheduling, ensuring that your schedule runs smoothly.</li>
-        <li>Patient Communication: We handle patient inquiries via phone, email, or secure messaging platforms, relaying important information between patients and doctors, and ensuring that patients receive timely responses.</li>
-        <li>Medical Records Management: Our team assists with the organization, updating, and retrieval of patient medical records, ensuring compliance with privacy regulations and maintaining accurate records.</li>
-        <li>Billing and Coding: Our virtual assistants handle medical billing, coding, and insurance claims processing, including follow-up on unpaid claims, reducing the administrative burden on your staff.</li>
-        <li>Prescription Management: We assist with prescription refills, manage prescription requests, and coordinate with pharmacies to ensure that patients receive their medications promptly.</li>
-        <li>Data Entry: Our virtual assistants input patient information, update records, and manage other administrative tasks, ensuring that your records are accurate and up-to-date.</li>
-        <li>Telehealth Support: We set up and manage telehealth appointments, troubleshoot technical issues, and ensure a smooth virtual consultation experience for patients and doctors.</li>
-        <li>Administrative Tasks: Our virtual assistants handle general office tasks such as managing emails, preparing documents, and maintaining schedules, allowing your staff to focus on patient care.</li>
-        <li>Research and Data Analysis: We conduct research on medical topics, analyze patient data, and prepare reports, providing you with the information you need to make informed decisions.</li>
-        <li>Marketing and Patient Outreach: Our virtual assistants assist with marketing efforts, manage social media accounts, and handle patient outreach initiatives, helping you grow your practice.</li>
+        <li><strong>Dictation Transcription:</strong> Accurate transcription of provider dictation for visits and procedures.</li>
+        <li><strong>Clinical Documents:</strong> Office notes, history and physicals, consultation letters, operative notes and discharge summaries.</li>
+        <li><strong>Specialty Terminology:</strong> Transcription that handles the language of your specialty.</li>
+        <li><strong>Quality Review:</strong> Proofreading and review before documents are returned.</li>
+        <li><strong>EHR-Ready Formatting:</strong> Documents formatted to fit your templates and records system.</li>
+        <li><strong>Secure Handling:</strong> Audio and documents handled with strict access controls and confidentiality.</li>
       </ul>
-      <p>Our virtual assistant services provide flexibility and support, allowing you to focus on patient care while we handle the day-to-day operations. Experience the benefits of having a dedicated assistant without the need for physical office space.</p>
-      <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" alt="Virtual Assistant">
+      <p>Complete, accurate documentation supports better care and gives coders what they need to bill correctly.</p>
+      <img src="https://images.pexels.com/photos/4974914/pexels-photo-4974914.jpeg" alt="Medical transcription in progress">
     `,
-    tags: ["Virtual Assistant", "Administrative Support", "Healthcare"],
+    tags: ["Transcription", "Documentation", "Clinical Notes"],
   },
   {
     id: 6,
-    title: "Revenue Cycle Management",
-    icon: <PiArrowsClockwise />,
-    image: "https://images.pexels.com/photos/7947656/pexels-photo-7947656.jpeg",
-    desc: "Maximize your practice’s revenue and efficiency with our comprehensive revenue cycle management services, from patient registration to final payment.",
-    body: `
-      <p>Our revenue cycle management services are designed to maximize your practice’s revenue and efficiency. We manage the entire revenue cycle, from patient registration to final payment, ensuring that all processes are optimized and that you receive timely reimbursements.</p>
-      <p>Our comprehensive revenue cycle management services include:</p>
-      <ul>
-        <li>Patient Registration: We streamline the patient registration process, ensuring accurate data collection and improving patient satisfaction.</li>
-        <li>Eligibility and Benefits Verification: Our team verifies patient eligibility and benefits to prevent claim denials and ensure accurate billing.</li>
-        <li>Charge Entry: We ensure accurate and timely entry of charges to maximize revenue and reduce errors.</li>
-        <li>Claim Submission: Our team submits claims to insurance companies promptly, ensuring timely reimbursements and reducing the risk of denials.</li>
-        <li>Payment Posting: We accurately post payments and adjustments to maintain up-to-date account balances and ensure financial accuracy.</li>
-        <li>Denial Management: Our team analyzes and resolves denied claims, submitting appeals and working to prevent future denials.</li>
-        <li>Revenue Cycle Metrics: We analyze revenue cycle metrics to identify trends, areas for improvement, and opportunities to optimize revenue.</li>
-        <li>Compliance: We ensure that all revenue cycle processes are compliant with industry regulations and standards, reducing the risk of penalties and audits.</li>
-        <li>Reporting: We provide detailed reports and analytics, giving you insights into your practice’s financial performance and helping you make informed decisions.</li>
-        <li>Patient Statements: We generate and send patient statements, ensuring that patients are informed of their financial responsibilities and that payments are collected promptly.</li>
-        <li>Follow-Up: Our team follows up on unpaid claims and patient balances, ensuring timely payment and reducing outstanding accounts receivable.</li>
-        <li>Customer Care Services: Our patient help desk services ensure that patients receive prompt and courteous assistance with billing inquiries, enhancing patient satisfaction.</li>
-      </ul>
-      <p>Our revenue cycle management services help you optimize your practice’s financial performance, reduce administrative burdens, and ensure timely reimbursements. Trust our team to manage your revenue cycle with expertise and precision.</p>
-      <img src="https://images.pexels.com/photos/7947837/pexels-photo-7947837.jpeg?auto=compress&cs=tinysrg" alt="Revenue Cycle Management">
-    `,
-    tags: ["Revenue Cycle Management", "Billing", "Healthcare"],
-  },
-  {
-    id: 7,
-    title: "Denial Management",
-    icon: <PiArrowUDownLeft />,
+    title: "Value-Added Services",
+    icon: <PiStack />,
     image: "https://images.pexels.com/photos/4476630/pexels-photo-4476630.jpeg",
-    desc: "Reduce denials and improve revenue with our comprehensive denial management services, ensuring timely resolution and payment.",
+    desc: "We do more than medical billing. Our team manages your revenue cycle as a whole to keep your practice productive and paid.",
     body: `
-      <p>Our denial management services help you reduce denials, improve revenue, and maintain a healthy cash flow. We manage the entire denial management process, from analyzing denied claims to submitting appeals, ensuring timely resolution and payment.</p>
-      <p>Our comprehensive denial management services include:</p>
+      <p>BrightPathRCM does more than medical billing. Beyond submitting claims, our team manages your revenue cycle as a whole, finding where money is being lost and fixing the process behind it, so your practice stays productive and financially healthy.</p>
+      <p>Our value-added services include:</p>
       <ul>
-        <li>Denial Analysis: Our team analyzes denied claims to identify reasons for denial and develop strategies to prevent future denials.</li>
-        <li>Appeals Submission: We prepare and submit appeals for denied claims, including necessary documentation and follow-up until resolution.</li>
-        <li>Follow-Up: Our team follows up on denied claims to ensure timely resolution and payment.</li>
-        <li>Compliance: We ensure that all denial management processes are compliant with industry regulations and standards, reducing the risk of penalties and audits.</li>
-        <li>Reporting: We provide detailed reports and analytics, giving you insights into your practice’s denial management performance and helping you make informed decisions.</li>
-        <li>Revenue Cycle Metrics: We analyze revenue cycle metrics to identify trends, areas for improvement, and opportunities to optimize revenue.</li>
-        <li>Customer Care Services: Our patient help desk services ensure that patients receive prompt and courteous assistance with billing inquiries, enhancing patient satisfaction.</li>
+        <li><strong>Revenue Cycle Management:</strong> End-to-end oversight from registration to final payment.</li>
+        <li><strong>Denial Analysis:</strong> Finding the root causes of recurring denials and fixing them upstream.</li>
+        <li><strong>Old A/R Recovery:</strong> Working aged and previously written-off claims that may still be collectible.</li>
+        <li><strong>Practice Performance Reporting:</strong> Clear reports on collections, denials, A/R and payer trends.</li>
+        <li><strong>Fee Schedule and Payer Review:</strong> Checking that you are being paid what your contracts allow.</li>
+        <li><strong>Patient Help Desk:</strong> Courteous support for patients with billing questions.</li>
       </ul>
-      <p>Our denial management services help you reduce denials, improve revenue, and maintain a healthy cash flow. With our expertise and attention to detail, you can trust that your denials will be managed efficiently and effectively.</p>
-      <img src="https://images.pexels.com/photos/4476630/pexels-photo-4476630.jpeg" alt="Denial Management">
+      <p>These services can be added to any engagement, so you get support where your practice needs it most.</p>
+      <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" alt="Team reviewing practice revenue reports">
     `,
-    tags: ["Denial Management", "Appeals", "Healthcare"],
+    tags: ["Revenue Cycle", "Denials", "Reporting"],
   },
 ];
 

@@ -6,7 +6,7 @@ import CTASection from "@/components/CTASection/CTASection";
 export const metadata = {
   title: "Services",
   description:
-    "Medical and dental billing, coding, credentialing, prior authorization, virtual assistance, revenue cycle management and denial management from BrightPathRCM.",
+    "Medical billing, medical coding, credentialing, front office management, medical transcription and value-added revenue cycle services from BrightPathRCM.",
 };
 
 const Services = () => {

@@ -57,7 +57,7 @@ const Navbar = () => {
 
         <div className="site-header__actions">
           <Link href="/contact" className="btn site-header__cta">
-            Book a revenue review
+            Talk To An Expert
           </Link>
           <button
             type="button"

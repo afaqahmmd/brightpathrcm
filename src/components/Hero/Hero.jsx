@@ -19,7 +19,7 @@ const Hero = () => {
           </p>
           <div className="hero__actions">
             <Link href="/contact" className="btn btn--lg">
-              Book a revenue review <PiArrowRight />
+              BOOK A FREE CONSULTATION <PiArrowRight />
             </Link>
             <Link href="/services" className="link-arrow hero__secondary">
               Explore our services <PiArrowUpRight />

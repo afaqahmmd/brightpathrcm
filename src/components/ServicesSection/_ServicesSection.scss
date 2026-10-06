@@ -184,6 +184,30 @@
       max-width: 44ch;
     }
 
+    .service-card__highlights {
+      list-style: none;
+      margin: 8px 0 0;
+      padding: 18px 28px 0 0;
+      border-top: 1px solid var(--line);
+      display: grid;
+      gap: 10px;
+
+      li {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 10px;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        color: var(--text);
+      }
+
+      svg {
+        margin-top: 0.2em;
+        font-size: 1.05rem;
+        color: var(--orange-400);
+      }
+    }
+
     &::after {
       content: "";
       position: absolute;

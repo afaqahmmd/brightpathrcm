@@ -46,7 +46,7 @@ const ServiceSection = ({ number = "02" }) => {
               the gaps are.
             </p>
             <Link href="/contact" className="btn btn--navy">
-              Book a revenue review <PiArrowRight />
+              Request a Quote<PiArrowRight />
             </Link>
           </div>
         </div>

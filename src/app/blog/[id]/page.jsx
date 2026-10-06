@@ -40,14 +40,14 @@ const page = ({ params }) => {
         data={[
           blogPostingSchema(blog),
           breadcrumbSchema([
-            { name: "Insights", path: "/blog" },
+            { name: "Blogs", path: "/blog" },
             { name: blog.title, path: `/blog/${blog.id}` },
           ]),
         ]}
       />
       <PageHeader
         compact
-        crumbs={[{ label: "Insights", href: "/blog" }, { label: "Article" }]}
+        crumbs={[{ label: "Blogs", href: "/blog" }, { label: "Article" }]}
         eyebrow={
           <>
             <time dateTime={blog.date}>{formatDate(blog.date)}</time> · {readingTime(blog.body)} min

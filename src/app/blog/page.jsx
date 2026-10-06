@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   path: "/blog",
-  title: "Insights",
+  title: "Blogs",
   description: "Articles on healthcare technology, billing and the business of running a practice.",
 });
 
@@ -18,8 +18,8 @@ const Blog = () => {
     <>
       <PageHeader
         compact
-        crumbs={[{ label: "Insights" }]}
-        eyebrow="Insights"
+        crumbs={[{ label: "Blogs" }]}
+        eyebrow="Blogs"
         title="Notes on healthcare, technology and the revenue cycle."
       />
 

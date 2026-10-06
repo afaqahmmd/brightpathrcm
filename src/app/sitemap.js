@@ -11,6 +11,7 @@ export default function sitemap() {
     { url: url("/specialities"), lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: url("/about"), lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: url("/contact"), lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: url("/expertise"), lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: url("/blog"), lastModified: now, changeFrequency: "weekly", priority: 0.6 },
     ...services.map((service) => ({
       url: url(`/services/${service.id}`),

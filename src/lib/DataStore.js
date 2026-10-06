@@ -667,6 +667,13 @@ export const services = [
     icon: <PiReceipt />,
     image: "https://images.pexels.com/photos/4974914/pexels-photo-4974914.jpeg",
     desc: "Professional medical billing and management for small and medium-sized practices, with careful preparation of every claim so you can count on getting paid.",
+    highlights: [
+      "Reduce claim denials and minimize billing errors with accurate, timely claim submission.",
+      "Stay on top of your accounts receivable with consistent follow-up on outstanding claims.",
+      "Let our experienced billing team handle the paperwork while you focus on delivering quality patient care.",
+      "Improve your practice’s cash flow with an efficient and reliable revenue cycle management process.",
+      "From claim submission to payment posting and follow-up, we manage the billing process from start to finish.",
+    ],
     body: `
       <p>BrightPathRCM provides professional medical billing and management services to small and medium-sized practices. We prepare every bill and payment claim with care, submit it cleanly and follow it through to payment, so your revenue is something you can count on.</p>
       <p>Our medical billing services include:</p>
@@ -853,4 +860,31 @@ export const specialities = [
     category: "Dental, PI & workers' comp",
   },
   { id: 37, title: "Dental Billing", category: "Dental, PI & workers' comp" },
+];
+
+// Platforms the team works in (Our Expertise page)
+
+export const platformGroups = [
+  {
+    id: "ehr",
+    title: "EHR / Practice Management",
+    desc: "Charge capture, claim creation and payment posting inside the system your practice already runs on.",
+    platforms: [
+      "eClinicalWorks",
+      "Tebra",
+      "DrChrono",
+      "ModMed",
+      "CharmHealth",
+      "TheraPlatform",
+      "ICANotes",
+      "OptiMantra",
+      "EMSOW",
+    ],
+  },
+  {
+    id: "clearinghouses",
+    title: "Clearinghouses & Payer Platforms",
+    desc: "Claim submission, eligibility checks, remittances and claim status across the clearinghouses and payer portals you use.",
+    platforms: ["Availity", "Office Ally", "TriZetto", "ClaimMD", "Optum", "Zelis", "PaySpan"],
+  },
 ];

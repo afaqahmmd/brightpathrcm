@@ -57,7 +57,7 @@ const Navbar = () => {
 
         <div className="site-header__actions">
           <Link href="/contact" className="btn site-header__cta">
-            Talk To An Expert
+            Talk To An Expert <PiArrowRight />
           </Link>
           <button
             type="button"

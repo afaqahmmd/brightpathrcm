@@ -20,7 +20,7 @@ const CTASection = ({
         </div>
         <div className="cta-band__actions">
           <Link href="/contact" className="btn btn--lg">
-            Book a revenue review <PiArrowRight />
+            Book Free Consultation <PiArrowRight />
           </Link>
           <div className="cta-band__contact mono">
             {contact.phone && <a href={contact.phoneHref}>{contact.phone}</a>}

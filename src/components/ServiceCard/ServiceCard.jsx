@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PiArrowUpRight } from "react-icons/pi";
+import { PiArrowUpRight, PiCheckCircle } from "react-icons/pi";
 
 const ServiceCard = ({ service, index, featured = false }) => {
   return (
@@ -16,6 +16,16 @@ const ServiceCard = ({ service, index, featured = false }) => {
       <div className="service-card__body">
         <h3 className="service-card__title">{service.title}</h3>
         <p className="service-card__desc">{service.desc}</p>
+        {featured && service.highlights?.length > 0 && (
+          <ul className="service-card__highlights">
+            {service.highlights.map((item) => (
+              <li key={item}>
+                <PiCheckCircle aria-hidden="true" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
       <span className="service-card__go" aria-hidden="true">
         <PiArrowUpRight />

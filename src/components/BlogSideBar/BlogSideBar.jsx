@@ -12,7 +12,7 @@ const BlogSideBar = ({ currentId, count = 5 }) => {
 
   return (
     <nav className="blog-sidebar" aria-label="More articles">
-      <p className="blog-sidebar__label mono">More insights</p>
+      <p className="blog-sidebar__label mono">More articles</p>
       <ul>
         {others.map((blog) => (
           <li key={blog.id}>

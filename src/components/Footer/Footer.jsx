@@ -19,7 +19,7 @@ const Footer = () => {
               handled with care, from first visit to final payment.
             </p>
             <Link href="/contact" className="btn">
-              Book a revenue review <PiArrowUpRight />
+              Book Free Consultation <PiArrowUpRight />
             </Link>
           </div>
 

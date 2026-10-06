@@ -6,6 +6,8 @@ import { PiArrowLeft, PiArrowRight } from "react-icons/pi";
 import { services } from "@/lib/DataStore";
 import PageHeader from "@/components/PageHeader/PageHeader";
 import CTASection from "@/components/CTASection/CTASection";
+import JsonLd from "@/components/JsonLd/JsonLd";
+import { breadcrumbSchema, pageMetadata, serviceSchema } from "@/lib/seo";
 
 const findService = (id) => services.find((service) => service.id == id);
 
@@ -16,7 +18,12 @@ export function generateStaticParams() {
 export function generateMetadata({ params }) {
   const service = findService(params.id);
   if (!service) return {};
-  return { title: service.title, description: service.desc };
+  return pageMetadata({
+    title: service.title,
+    description: service.desc,
+    path: `/services/${service.id}`,
+    images: [{ url: service.image, alt: service.title }],
+  });
 }
 
 const SingleService = ({ params }) => {
@@ -29,6 +36,15 @@ const SingleService = ({ params }) => {
 
   return (
     <>
+      <JsonLd
+        data={[
+          serviceSchema(service),
+          breadcrumbSchema([
+            { name: "Services", path: "/services" },
+            { name: service.title, path: `/services/${service.id}` },
+          ]),
+        ]}
+      />
       <PageHeader
         compact
         crumbs={[{ label: "Services", href: "/services" }, { label: service.title }]}

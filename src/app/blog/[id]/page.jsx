@@ -6,6 +6,8 @@ import { formatDate, readingTime } from "@/lib/blog";
 import PageHeader from "@/components/PageHeader/PageHeader";
 import BlogSideBar from "@/components/BlogSideBar/BlogSideBar";
 import CTASection from "@/components/CTASection/CTASection";
+import JsonLd from "@/components/JsonLd/JsonLd";
+import { blogPostingSchema, breadcrumbSchema, excerpt, pageMetadata } from "@/lib/seo";
 
 const findBlog = (id) => blogs.find((blog) => id == blog.id);
 
@@ -16,7 +18,13 @@ export function generateStaticParams() {
 export function generateMetadata({ params }) {
   const blog = findBlog(params.id);
   if (!blog) return {};
-  return { title: blog.title };
+  return pageMetadata({
+    title: blog.title,
+    description: excerpt(blog.body),
+    path: `/blog/${blog.id}`,
+    images: [{ url: blog.image, alt: blog.title }],
+    openGraph: { type: "article", publishedTime: blog.date, authors: [blog.author] },
+  });
 }
 
 const page = ({ params }) => {
@@ -28,6 +36,15 @@ const page = ({ params }) => {
 
   return (
     <>
+      <JsonLd
+        data={[
+          blogPostingSchema(blog),
+          breadcrumbSchema([
+            { name: "Insights", path: "/blog" },
+            { name: blog.title, path: `/blog/${blog.id}` },
+          ]),
+        ]}
+      />
       <PageHeader
         compact
         crumbs={[{ label: "Insights", href: "/blog" }, { label: "Article" }]}

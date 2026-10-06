@@ -25,7 +25,14 @@ There is no test suite.
   - `testimonials` are placeholders (`placeholder: true` renders a "Sample" badge). Replace with real, approved quotes.
   - Do not add statistics, client counts, years in business, certifications or compliance claims unless the client has supplied them. Coverage numbers on the site are derived from array lengths (`services.length`, `specialities.length`).
 - `blogs` and `services` have numeric `id` and an HTML `body` rendered with `html-react-parser` on `src/app/blog/[id]` and `src/app/services/[id]` (loose `==` lookup, `generateStaticParams`, `notFound()` for unknown ids). Blog bodies start with an `<h2>` duplicating the title; the blog page strips it.
-- `src/app/sitemap.js` and `robots.js` are generated from the data and `siteConfig.url`; there is no static sitemap in `public/`.
+- `src/app/sitemap.js` and `robots.js` are generated from the data and `siteConfig.url`; there is no static sitemap in `public/`. `robots.js` disallows everything on Vercel preview deployments (`VERCEL_ENV !== "production"`).
+
+## SEO
+
+- `src/lib/seo.js`: `pageMetadata({ title, description, path, images, openGraph })` gives every page a canonical URL plus Open Graph/Twitter tags; use it for new pages. It always sets `images` (default `/opengraph-image`) because a page-level `openGraph` replaces the layout's rather than merging. It also has the JSON-LD builders (`organizationSchema`, `websiteSchema`, `breadcrumbSchema`, `serviceSchema`, `blogPostingSchema`, `faqSchema`), rendered with `components/JsonLd`.
+- The layout emits Organization (`ProfessionalService`, address from `siteConfig.contact.postalAddress`) and WebSite schema on every page; the home page adds FAQPage from `qaArray`; service/blog detail pages add Service/BlogPosting and BreadcrumbList.
+- `src/app/opengraph-image.jsx` generates the default 1200×630 share card (edge runtime, because the Node build of `@vercel/og` fails to prerender on Windows). `manifest.js` serves the web manifest.
+- Google Search Console verification: set the `GOOGLE_SITE_VERIFICATION` env var (the `content` value of the HTML-tag method).
 - Remote images come from `images.pexels.com`, the only host allowed for `next/image` in `next.config.mjs`.
 
 ## Styling

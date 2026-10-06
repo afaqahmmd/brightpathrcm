@@ -2,11 +2,13 @@ import BlogCard from "@/components/BlogCard/BlogCard";
 import PageHeader from "@/components/PageHeader/PageHeader";
 import Reveal from "@/components/Reveal/Reveal";
 import { blogs } from "@/lib/DataStore";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
+  path: "/blog",
   title: "Insights",
   description: "Articles on healthcare technology, billing and the business of running a practice.",
-};
+});
 
 const Blog = () => {
   const sorted = [...blogs].sort((a, b) => b.date.localeCompare(a.date));

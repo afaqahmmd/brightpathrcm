@@ -7,7 +7,9 @@ import Navbar from "@/components/Navbar/Navbar";
 import TopBar from "@/components/TopBar/TopBar";
 import RouteProgress from "@/components/RouteProgress/RouteProgress";
 import Footer from "@/components/Footer/Footer";
+import JsonLd from "@/components/JsonLd/JsonLd";
 import { siteConfig } from "@/lib/siteConfig";
+import { organizationSchema, websiteSchema } from "@/lib/seo";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -33,11 +35,28 @@ export const metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  applicationName: siteConfig.name,
+  alternates: { canonical: "/" },
   openGraph: {
     siteName: siteConfig.name,
+    locale: "en_US",
     type: "website",
+    url: "/",
     description: siteConfig.description,
   },
+  twitter: {
+    card: "summary_large_image",
+    description: siteConfig.description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
+  },
+  // Google Search Console "HTML tag" verification code (content value only).
+  ...(process.env.GOOGLE_SITE_VERIFICATION && {
+    verification: { google: process.env.GOOGLE_SITE_VERIFICATION },
+  }),
 };
 
 export const viewport = {
@@ -59,6 +78,7 @@ export default function RootLayout({ children }) {
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: jsInit }} />
+        <JsonLd data={[organizationSchema(), websiteSchema()]} />
       </head>
       <body>
         <RouteProgress />

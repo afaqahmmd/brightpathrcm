@@ -17,8 +17,19 @@ export const siteConfig = {
     address: "1500 N Grant St, Ste R, Denver, CO 80203",
     addressHref:
       "https://www.google.com/maps/search/?api=1&query=1500+N+Grant+St+Ste+R+Denver+CO+80203",
-    hours: "Monday–Friday, business hours",
+    hours: "Monday-Friday, business hours",
+    // Structured copy of `address` for search-engine schema (JSON-LD). Keep both in sync.
+    postalAddress: {
+      streetAddress: "1500 N Grant St, Ste R",
+      addressLocality: "Denver",
+      addressRegion: "CO",
+      postalCode: "80203",
+      addressCountry: "US",
+    },
   },
+
+  // Region served, used in search-engine schema.
+  areaServed: "United States",
 
   // Google Maps embed URL for the About page. Leave empty to hide the map.
   mapEmbedUrl: "https://www.google.com/maps?q=1500+N+Grant+St+Ste+R,+Denver,+CO+80203&output=embed",

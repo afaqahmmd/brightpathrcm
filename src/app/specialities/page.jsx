@@ -2,12 +2,14 @@ import { specialities, specialityCategories } from "@/lib/DataStore";
 import PageHeader from "@/components/PageHeader/PageHeader";
 import SpecialityDirectory from "@/components/SpecialityCard/SpecialityDirectory";
 import CTASection from "@/components/CTASection/CTASection";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
+  path: "/specialities",
   title: "Specialties",
   description:
     "BrightPathRCM provides billing and revenue cycle management for a wide range of medical and dental specialties.",
-};
+});
 
 const Specialities = () => {
   return (

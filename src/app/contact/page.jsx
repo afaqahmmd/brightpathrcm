@@ -2,11 +2,13 @@ import Link from "next/link";
 import { PiEnvelopeSimple, PiPhone, PiMapPin, PiClock } from "react-icons/pi";
 import ContactForm from "@/components/ContactForm/ContactForm";
 import { siteConfig } from "@/lib/siteConfig";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
+  path: "/contact",
   title: "Contact",
   description: "Book a revenue review or ask BrightPathRCM a question about medical billing and revenue cycle management.",
-};
+});
 
 const nextSteps = [
   "A member of our team reviews your request.",

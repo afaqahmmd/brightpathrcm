@@ -4,12 +4,14 @@ import ServiceSection from "@/components/ServicesSection/ServiceSection";
 import CTASection from "@/components/CTASection/CTASection";
 import Reveal from "@/components/Reveal/Reveal";
 import { siteConfig } from "@/lib/siteConfig";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
+  path: "/about",
   title: "About",
   description:
     "BrightPathRCM is a medical billing and revenue cycle management partner for independent practices, groups and facilities.",
-};
+});
 
 const statements = [
   {

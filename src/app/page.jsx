@@ -8,10 +8,19 @@ import ChooseUsSection from "@/components/ChooseUsSection/ChooseUsSection";
 import TestimonialSection from "@/components/TestimonialSection/TestimonialSection";
 import QASection from "@/components/QASection/QASection";
 import CTASection from "@/components/CTASection/CTASection";
+import JsonLd from "@/components/JsonLd/JsonLd";
+import { qaArray } from "@/lib/DataStore";
+import { faqSchema } from "@/lib/seo";
+
+// Title, description and social tags come from the root layout defaults.
+export const metadata = {
+  alternates: { canonical: "/" },
+};
 
 const Home = () => {
   return (
     <>
+      <JsonLd data={faqSchema(qaArray)} />
       <Hero />
       <CoverageStrip />
       <RevenueLeaks />

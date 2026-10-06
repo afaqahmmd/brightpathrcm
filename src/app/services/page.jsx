@@ -2,12 +2,14 @@ import { services, specialities } from "@/lib/DataStore";
 import PageHeader from "@/components/PageHeader/PageHeader";
 import ServicePageCard from "@/components/ServicePageCard/ServicePageCard";
 import CTASection from "@/components/CTASection/CTASection";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
+  path: "/services",
   title: "Services",
   description:
     "Medical billing, medical coding, credentialing, front office management, medical transcription and value-added revenue cycle services from BrightPathRCM.",
-};
+});
 
 const Services = () => {
   return (

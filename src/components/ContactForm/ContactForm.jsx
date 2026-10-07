@@ -104,13 +104,13 @@ const ContactForm = () => {
           <span className="mono">02</span> Preferred time for a call
         </legend>
         <div className="contact-form__grid">
-          <Field label="Date" name="date">
+          <Field label="Date" name="date" optional>
             <input id="date" type="date" name="date"
-              value={formData.date} onChange={handleChange} required />
+              value={formData.date} onChange={handleChange} />
           </Field>
-          <Field label="Time" name="time">
+          <Field label="Time" name="time" optional>
             <input id="time" type="time" name="time"
-              value={formData.time} onChange={handleChange} required />
+              value={formData.time} onChange={handleChange} />
           </Field>
         </div>
       </fieldset>

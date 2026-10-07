@@ -7,7 +7,7 @@ export const dynamic = "force-dynamic";
 
 const LIMITS = { firstName: 100, lastName: 100, email: 200, phone: 40, date: 20, time: 20, message: 5000 };
 const LABELS = { firstName: "first name", lastName: "last name", email: "email", phone: "phone", date: "date", time: "time", message: "message" };
-const REQUIRED = ["firstName", "lastName", "email", "phone", "date", "time"];
+const REQUIRED = ["firstName", "lastName", "email", "phone"];
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 let transporter;
@@ -16,6 +16,8 @@ const getTransporter = () => {
     const port = Number(process.env.SMTP_PORT) || 465;
     transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
+      // EHLO hostname. Defaults to the server's machine name (random on Vercel), which spam filters penalise.
+      name: new URL(siteConfig.url).hostname.replace(/^www\./, ""),
       port,
       secure: port === 465, // implicit TLS on 465; STARTTLS otherwise
       auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASSWORD },
@@ -68,8 +70,8 @@ export async function POST(request) {
     ["Name", fullName],
     ["Email", data.email],
     ["Phone", data.phone],
-    ["Preferred date", data.date],
-    ["Preferred time", data.time],
+    ["Preferred date", data.date || "Not specified"],
+    ["Preferred time", data.time || "Not specified"],
   ];
 
   const text = [
